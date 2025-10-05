@@ -414,8 +414,13 @@ export default function Home() {
       <section id="why" className="py-20 px-6 border-t border-white/10 bg-white/5 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why EdgeLabs?</h2>
-            <p className="text-xl text-gray-400">Proven impact | Rapid delivery | Scalable growth</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Why EdgeLabs?</h2>
+            <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-4xl mx-auto leading-relaxed">
+              We consult and co-create AI-powered systems that transform processes and shape the future of business.
+            </p>
+            <p className="text-lg text-gray-400 italic">
+              Innovation and intelligent optimisation are in our DNA.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
