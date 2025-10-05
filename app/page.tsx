@@ -26,7 +26,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-40 pb-20 px-6">
+      <section className="pt-48 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
@@ -106,7 +106,7 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <p className="text-2xl font-bold text-blue-400">
+            <p className="text-2xl font-bold text-white">
               80% of automation ROI is realised in &lt;12 months
             </p>
             <p className="text-lg text-gray-300 mt-4">
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* How It Works - Workflow */}
-      <section id="how-it-works" className="py-20 px-6 border-t border-white/10 scroll-mt-20">
+      <section id="how-it-works" className="py-20 px-6 border-t border-white/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">From Bottlenecks to Working Automation</h2>
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* Case Studies */}
-      <section id="case-studies" className="py-20 px-6 border-t border-white/10 bg-white/5 scroll-mt-20">
+      <section id="case-studies" className="py-20 px-6 border-t border-white/10 bg-white/5 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Case Studies</h2>
@@ -206,44 +206,44 @@ export default function Home() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-xl font-bold mb-4 text-red-400">Challenge</h4>
+                    <h4 className="text-xl font-bold mb-4 text-white">Challenge</h4>
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex gap-2">
-                        <span className="text-red-400">•</span>
+                        <span className="text-gray-500">•</span>
                         <span>Autism Spectrum Disease diagnostic waits escalating, with ~1,000+ children on list</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-red-400">•</span>
+                        <span className="text-gray-500">•</span>
                         <span>Current pathway running at ~2× gold standard (5.8h vs 2.5–3.5h per assessment)</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-red-400">•</span>
+                        <span className="text-gray-500">•</span>
                         <span>Clinicians doing admin; non-standard reporting</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-red-400">•</span>
+                        <span className="text-gray-500">•</span>
                         <span>Core capacity and skill-mix misaligned</span>
                       </li>
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-bold mb-4 text-green-400">Solution</h4>
+                    <h4 className="text-xl font-bold mb-4 text-white">Solution</h4>
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex gap-2">
-                        <span className="text-green-400">✓</span>
+                        <span className="text-white">✓</span>
                         <span>Re-engineered pathway to gold standard with AI tools</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-green-400">✓</span>
+                        <span className="text-white">✓</span>
                         <span>Speech-to-text, auto-scoring, templated reporting integrated with EHR</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-green-400">✓</span>
+                        <span className="text-white">✓</span>
                         <span>Reallocated tasks to Bands 3–5, standardised templates/SOPs</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-green-400">✓</span>
+                        <span className="text-white">✓</span>
                         <span>Optimised clinic flow</span>
                       </li>
                     </ul>
@@ -251,26 +251,26 @@ export default function Home() {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-white/10">
-                  <h4 className="text-xl font-bold mb-6 text-blue-400">Impact</h4>
+                  <h4 className="text-xl font-bold mb-6 text-white">Impact</h4>
                   <div className="grid md:grid-cols-4 gap-6">
                     <div className="text-center">
                       <Clock className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-blue-400">~60%</p>
+                      <p className="text-2xl font-bold text-white">~60%</p>
                       <p className="text-sm text-gray-400">Time reduction per assessment (5.8h → ~2.25h)</p>
                     </div>
                     <div className="text-center">
                       <TrendingUp className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-blue-400">~2.5×</p>
+                      <p className="text-2xl font-bold text-white">~2.5×</p>
                       <p className="text-sm text-gray-400">Throughput increase with existing workforce</p>
                     </div>
                     <div className="text-center">
                       <Target className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-blue-400">Hub Model</p>
+                      <p className="text-2xl font-bold text-white">Hub Model</p>
                       <p className="text-sm text-gray-400">Foundation for Neurodiversity Hub (ASD/ADHD)</p>
                     </div>
                     <div className="text-center">
                       <DollarSign className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-blue-400">£1.5m</p>
+                      <p className="text-2xl font-bold text-white">£1.5m</p>
                       <p className="text-sm text-gray-400">Net annual contribution (scalable to £4.5m)</p>
                     </div>
                   </div>
@@ -291,36 +291,36 @@ export default function Home() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-xl font-bold mb-4 text-red-400">Challenge</h4>
+                    <h4 className="text-xl font-bold mb-4 text-white">Challenge</h4>
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex gap-2">
-                        <span className="text-red-400">•</span>
+                        <span className="text-gray-500">•</span>
                         <span>Manual booking system limited garage throughput</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-red-400">•</span>
+                        <span className="text-gray-500">•</span>
                         <span>2 bays fully utilised, overflow stock of cars waiting</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-red-400">•</span>
+                        <span className="text-gray-500">•</span>
                         <span>Storage and cost pressures mounting</span>
                       </li>
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-bold mb-4 text-green-400">Solution</h4>
+                    <h4 className="text-xl font-bold mb-4 text-white">Solution</h4>
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex gap-2">
-                        <span className="text-green-400">✓</span>
+                        <span className="text-white">✓</span>
                         <span>Bespoke digital booking system aligned demand with capacity</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-green-400">✓</span>
+                        <span className="text-white">✓</span>
                         <span>Introduced a third bay through optimised scheduling</span>
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-green-400">✓</span>
+                        <span className="text-white">✓</span>
                         <span>Reduced waiting stock and storage costs</span>
                       </li>
                     </ul>
@@ -328,26 +328,26 @@ export default function Home() {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-white/10">
-                  <h4 className="text-xl font-bold mb-6 text-blue-400">Impact</h4>
+                  <h4 className="text-xl font-bold mb-6 text-white">Impact</h4>
                   <div className="grid md:grid-cols-4 gap-6">
                     <div className="text-center">
                       <TrendingUp className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-blue-400">40%</p>
+                      <p className="text-2xl font-bold text-white">40%</p>
                       <p className="text-sm text-gray-400">Efficiency increase in service throughput</p>
                     </div>
                     <div className="text-center">
                       <Car className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-blue-400">Reduced</p>
+                      <p className="text-2xl font-bold text-white">Reduced</p>
                       <p className="text-sm text-gray-400">Car storage costs and improved site safety</p>
                     </div>
                     <div className="text-center">
                       <Calendar className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-blue-400">Better</p>
+                      <p className="text-2xl font-bold text-white">Better</p>
                       <p className="text-sm text-gray-400">Customer experience with predictable turnaround</p>
                     </div>
                     <div className="text-center">
                       <Coins className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-blue-400">Smoother</p>
+                      <p className="text-2xl font-bold text-white">Smoother</p>
                       <p className="text-sm text-gray-400">Cash flow and reduced admin load</p>
                     </div>
                   </div>
@@ -359,7 +359,7 @@ export default function Home() {
       </section>
 
       {/* What We Do Best */}
-      <section id="services" className="py-20 px-6 border-t border-white/10 scroll-mt-20">
+      <section id="services" className="py-20 px-6 border-t border-white/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">What We Do Best</h2>
@@ -411,7 +411,7 @@ export default function Home() {
       </section>
 
       {/* Why EdgeLabs */}
-      <section id="why" className="py-20 px-6 border-t border-white/10 bg-white/5 scroll-mt-20">
+      <section id="why" className="py-20 px-6 border-t border-white/10 bg-white/5 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Why EdgeLabs?</h2>
@@ -466,7 +466,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 border-t border-white/10 scroll-mt-20">
+      <section id="contact" className="py-20 px-6 border-t border-white/10 scroll-mt-24">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-400 mb-8">
