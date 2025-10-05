@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Clock, DollarSign, Clipboard, Map, Shuffle, Search, Route, Rocket, BarChart3, Users, Hospital, Wrench, TrendingUp, Car, Calendar, Coins, Target, Zap, Globe } from "lucide-react";
 
 export default function Home() {
   return (
@@ -64,7 +65,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-black/50 p-6 rounded-sm border border-white/10">
-              <div className="text-4xl mb-3">⏱️</div>
+              <Clock className="w-10 h-10 mb-3 text-white" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Manual Admin Barrier</h3>
               <p className="text-gray-400 text-sm">
                 40% of UK SMEs cite manual admin as their #1 barrier to growth
@@ -72,7 +73,7 @@ export default function Home() {
             </div>
 
             <div className="bg-black/50 p-6 rounded-sm border border-white/10">
-              <div className="text-4xl mb-3">💸</div>
+              <DollarSign className="w-10 h-10 mb-3 text-white" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Hidden Costs</h3>
               <p className="text-gray-400 text-sm">
                 Storage, errors, delays, and lost revenue pile up
@@ -80,7 +81,7 @@ export default function Home() {
             </div>
 
             <div className="bg-black/50 p-6 rounded-sm border border-white/10">
-              <div className="text-4xl mb-3">📋</div>
+              <Clipboard className="w-10 h-10 mb-3 text-white" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Wasted Time</h3>
               <p className="text-gray-400 text-sm">
                 The average SME employee wastes 6+ hours/week on avoidable tasks
@@ -88,7 +89,7 @@ export default function Home() {
             </div>
 
             <div className="bg-black/50 p-6 rounded-sm border border-white/10">
-              <div className="text-4xl mb-3">🗺️</div>
+              <Map className="w-10 h-10 mb-3 text-white" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Inefficient Journeys</h3>
               <p className="text-gray-400 text-sm">
                 Bookings, enquiries, or sales processes are inefficient
@@ -96,7 +97,7 @@ export default function Home() {
             </div>
 
             <div className="bg-black/50 p-6 rounded-sm border border-white/10">
-              <div className="text-4xl mb-3">🔀</div>
+              <Shuffle className="w-10 h-10 mb-3 text-white" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Siloed Systems</h3>
               <p className="text-gray-400 text-sm">
                 Tools don&apos;t talk to each other, causing duplication and errors
@@ -128,46 +129,49 @@ export default function Home() {
           <div className="grid md:grid-cols-5 gap-8">
             {[
               {
-                icon: "🔍",
+                icon: Search,
                 title: "Discover inefficiencies",
                 subtitle: "Find wasted time, expose efficiencies & bottlenecks",
                 deliverable: "Pain point map + immediate action list"
               },
               {
-                icon: "🛤️",
+                icon: Route,
                 title: "Roadmap",
                 subtitle: "Build an automation roadmap",
                 deliverable: "Investment case with ROI"
               },
               {
-                icon: "🚀",
+                icon: Rocket,
                 title: "Build Fast",
                 subtitle: "Deliver working solutions fast",
                 deliverable: "Booking systems, invoicing, dashboards, AI copilots"
               },
               {
-                icon: "📊",
+                icon: BarChart3,
                 title: "Scale Impact",
                 subtitle: "Scale and Optimise",
                 deliverable: "Savings and productivity gains"
               },
               {
-                icon: "👥",
+                icon: Users,
                 title: "Empower Teams",
                 subtitle: "Train your team to own it",
                 deliverable: "Workshops, training, toolkits"
               }
-            ].map((step, idx) => (
-              <div key={idx} className="bg-white/5 p-6 rounded-sm border border-white/10 hover:bg-white/10 transition-colors">
-                <div className="text-5xl mb-4">{step.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-sm text-gray-400 mb-4">{step.subtitle}</p>
-                <div className="pt-4 border-t border-white/10">
-                  <p className="text-xs text-gray-500 font-semibold">DELIVERABLE</p>
-                  <p className="text-sm text-gray-300 mt-1">{step.deliverable}</p>
+            ].map((step, idx) => {
+              const IconComponent = step.icon;
+              return (
+                <div key={idx} className="bg-white/5 p-6 rounded-sm border border-white/10 hover:bg-white/10 transition-colors">
+                  <IconComponent className="w-12 h-12 mb-4 text-white" strokeWidth={1.5} />
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-sm text-gray-400 mb-4">{step.subtitle}</p>
+                  <div className="pt-4 border-t border-white/10">
+                    <p className="text-xs text-gray-500 font-semibold">DELIVERABLE</p>
+                    <p className="text-sm text-gray-300 mt-1">{step.deliverable}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-12 text-center max-w-3xl mx-auto">
@@ -193,7 +197,7 @@ export default function Home() {
             <div className="bg-black/50 rounded-sm border border-white/10 overflow-hidden">
               <div className="p-8">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="text-5xl">🏥</div>
+                  <Hospital className="w-14 h-14 text-white flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="text-3xl font-bold mb-2">NHS Autism Diagnostic Pathway</h3>
                     <p className="text-gray-400">Transforming diagnostic efficiency with AI automation</p>
@@ -250,22 +254,22 @@ export default function Home() {
                   <h4 className="text-xl font-bold mb-6 text-blue-400">Impact</h4>
                   <div className="grid md:grid-cols-4 gap-6">
                     <div className="text-center">
-                      <div className="text-4xl mb-2">⏱️</div>
+                      <Clock className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-blue-400">~60%</p>
                       <p className="text-sm text-gray-400">Time reduction per assessment (5.8h → ~2.25h)</p>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl mb-2">📈</div>
+                      <TrendingUp className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-blue-400">~2.5×</p>
                       <p className="text-sm text-gray-400">Throughput increase with existing workforce</p>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl mb-2">🏗️</div>
+                      <Target className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-blue-400">Hub Model</p>
                       <p className="text-sm text-gray-400">Foundation for Neurodiversity Hub (ASD/ADHD)</p>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl mb-2">💰</div>
+                      <DollarSign className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-blue-400">£1.5m</p>
                       <p className="text-sm text-gray-400">Net annual contribution (scalable to £4.5m)</p>
                     </div>
@@ -278,7 +282,7 @@ export default function Home() {
             <div className="bg-black/50 rounded-sm border border-white/10 overflow-hidden">
               <div className="p-8">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="text-5xl">🔧</div>
+                  <Wrench className="w-14 h-14 text-white flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="text-3xl font-bold mb-2">Auto Garage - Smart Booking System</h3>
                     <p className="text-gray-400">Unlocking capacity through intelligent scheduling</p>
@@ -327,22 +331,22 @@ export default function Home() {
                   <h4 className="text-xl font-bold mb-6 text-blue-400">Impact</h4>
                   <div className="grid md:grid-cols-4 gap-6">
                     <div className="text-center">
-                      <div className="text-4xl mb-2">📈</div>
+                      <TrendingUp className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-blue-400">40%</p>
                       <p className="text-sm text-gray-400">Efficiency increase in service throughput</p>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl mb-2">🚗</div>
+                      <Car className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-blue-400">Reduced</p>
                       <p className="text-sm text-gray-400">Car storage costs and improved site safety</p>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl mb-2">⏰</div>
+                      <Calendar className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-blue-400">Better</p>
                       <p className="text-sm text-gray-400">Customer experience with predictable turnaround</p>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl mb-2">💵</div>
+                      <Coins className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-blue-400">Smoother</p>
                       <p className="text-sm text-gray-400">Cash flow and reduced admin load</p>
                     </div>
@@ -416,7 +420,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-black/50 p-8 rounded-sm border border-white/10">
-              <div className="text-5xl mb-4">🎯</div>
+              <Target className="w-12 h-12 mb-4 text-white" strokeWidth={1.5} />
               <h3 className="text-2xl font-bold mb-3">Proven Track Record</h3>
               <p className="text-gray-300">
                 15+ years delivering large-scale transformation and complex AI automation in the public and private sector
@@ -424,7 +428,7 @@ export default function Home() {
             </div>
 
             <div className="bg-black/50 p-8 rounded-sm border border-white/10">
-              <div className="text-5xl mb-4">💰</div>
+              <DollarSign className="w-12 h-12 mb-4 text-white" strokeWidth={1.5} />
               <h3 className="text-2xl font-bold mb-3">Real Results</h3>
               <p className="text-gray-300">
                 £3m+ savings delivered, supply chains built, digital solutions implemented
@@ -432,7 +436,7 @@ export default function Home() {
             </div>
 
             <div className="bg-black/50 p-8 rounded-sm border border-white/10">
-              <div className="text-5xl mb-4">⚡</div>
+              <Zap className="w-12 h-12 mb-4 text-white" strokeWidth={1.5} />
               <h3 className="text-2xl font-bold mb-3">Boutique Scale</h3>
               <p className="text-gray-300">
                 Hands-on expertise and rapid delivery - no corporate bureaucracy, just results
@@ -440,7 +444,7 @@ export default function Home() {
             </div>
 
             <div className="bg-black/50 p-8 rounded-sm border border-white/10">
-              <div className="text-5xl mb-4">🌐</div>
+              <Globe className="w-12 h-12 mb-4 text-white" strokeWidth={1.5} />
               <h3 className="text-2xl font-bold mb-3">Scalable Network</h3>
               <p className="text-gray-300">
                 Network of developers and automation specialists ready to scale with client needs
