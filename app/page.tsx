@@ -220,7 +220,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-400 mb-8">
-            Let's discuss how AI automation can drive efficiency and growth in your organization.
+            Let&apos;s discuss how AI automation can drive efficiency and growth in your organization.
           </p>
           <a
             href="mailto:hello@edgelabs.io"
