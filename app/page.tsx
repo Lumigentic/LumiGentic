@@ -6,45 +6,49 @@ export default function Home() {
     <div className="bg-black text-white min-h-screen">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-sm z-50 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Image
             src="/edgelabs-logo.png"
             alt="EdgeLabs"
-            width={180}
-            height={40}
+            width={140}
+            height={32}
             priority
-            className="invert"
+            className="invert sm:w-[180px] sm:h-[40px]"
           />
-          <div className="flex gap-8 text-sm">
+          <div className="hidden md:flex gap-8 text-sm">
             <a href="#how-it-works" className="hover:text-gray-300 transition-colors">How It Works</a>
             <a href="#case-studies" className="hover:text-gray-300 transition-colors">Case Studies</a>
             <a href="#services" className="hover:text-gray-300 transition-colors">Services</a>
             <a href="#why" className="hover:text-gray-300 transition-colors">Why Us</a>
             <a href="#contact" className="hover:text-gray-300 transition-colors">Contact</a>
           </div>
+          {/* Mobile menu - simplified */}
+          <a href="#contact" className="md:hidden px-4 py-2 bg-white text-black text-sm font-semibold rounded-sm">
+            Contact
+          </a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-48 pb-20 px-6">
+      <section className="pt-32 sm:pt-40 md:pt-48 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
               High-impact automation.
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl">
               Solutions that cut wasted time, reduce costs, and scale your business.
             </p>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
                 href="#contact"
-                className="px-8 py-4 bg-white text-black font-semibold rounded-sm hover:bg-gray-200 transition-colors"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-sm hover:bg-gray-200 transition-colors text-center"
               >
                 Start Your Journey
               </a>
               <a
                 href="#how-it-works"
-                className="px-8 py-4 border border-white/20 font-semibold rounded-sm hover:bg-white/10 transition-colors"
+                className="px-6 sm:px-8 py-3 sm:py-4 border border-white/20 font-semibold rounded-sm hover:bg-white/10 transition-colors text-center"
               >
                 See How It Works
               </a>
@@ -54,16 +58,16 @@ export default function Home() {
       </section>
 
       {/* The Problem */}
-      <section className="py-20 px-6 border-t border-white/10 bg-white/5">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-white/10 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">The Problem</h2>
-            <p className="text-xl text-gray-300">
+          <div className="mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">The Problem</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300">
               Manual processes, bottlenecks, and inefficiencies drain capacity, slow growth, and frustrate teams.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
             <div className="bg-black/50 p-6 rounded-sm border border-white/10">
               <Clock className="w-10 h-10 mb-3 text-white" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Manual Admin Barrier</h3>
@@ -117,16 +121,16 @@ export default function Home() {
       </section>
 
       {/* How It Works - Workflow */}
-      <section id="how-it-works" className="py-20 px-6 border-t border-white/10 scroll-mt-24">
+      <section id="how-it-works" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-white/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">From Bottlenecks to Working Automation</h2>
-            <p className="text-xl text-gray-400 italic">
+          <div className="mb-12 sm:mb-16 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">From Bottlenecks to Working Automation</h2>
+            <p className="text-lg sm:text-xl text-gray-400 italic">
               &quot;We diagnose. We design. We build. We optimise. We empower.&quot;
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
             {[
               {
                 icon: Search,
@@ -185,28 +189,28 @@ export default function Home() {
       </section>
 
       {/* Case Studies */}
-      <section id="case-studies" className="py-20 px-6 border-t border-white/10 bg-white/5 scroll-mt-24">
+      <section id="case-studies" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-white/10 bg-white/5 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Case Studies</h2>
-            <p className="text-xl text-gray-400">Real impact, delivered.</p>
+          <div className="mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Case Studies</h2>
+            <p className="text-lg sm:text-xl text-gray-400">Real impact, delivered.</p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {/* NHS Case Study */}
             <div className="bg-black/50 rounded-sm border border-white/10 overflow-hidden">
-              <div className="p-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <Hospital className="w-14 h-14 text-white flex-shrink-0" strokeWidth={1.5} />
+              <div className="p-4 sm:p-6 md:p-8">
+                <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <Hospital className="w-12 h-12 sm:w-14 sm:h-14 text-white flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="text-3xl font-bold mb-2">NHS Autism Diagnostic Pathway</h3>
-                    <p className="text-gray-400">Transforming diagnostic efficiency with AI automation</p>
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-2">NHS Autism Diagnostic Pathway</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Transforming diagnostic efficiency with AI automation</p>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
                   <div>
-                    <h4 className="text-xl font-bold mb-4 text-white">Challenge</h4>
+                    <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Challenge</h4>
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex gap-2">
                         <span className="text-gray-500">•</span>
@@ -228,7 +232,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-bold mb-4 text-white">Solution</h4>
+                    <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Solution</h4>
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex gap-2">
                         <span className="text-white">✓</span>
@@ -251,8 +255,8 @@ export default function Home() {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-white/10">
-                  <h4 className="text-xl font-bold mb-6 text-white">Impact</h4>
-                  <div className="grid md:grid-cols-4 gap-6">
+                  <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-white">Impact</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                     <div className="text-center">
                       <Clock className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-white">~60%</p>
@@ -280,18 +284,18 @@ export default function Home() {
 
             {/* SME Case Study */}
             <div className="bg-black/50 rounded-sm border border-white/10 overflow-hidden">
-              <div className="p-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <Wrench className="w-14 h-14 text-white flex-shrink-0" strokeWidth={1.5} />
+              <div className="p-4 sm:p-6 md:p-8">
+                <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <Wrench className="w-12 h-12 sm:w-14 sm:h-14 text-white flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="text-3xl font-bold mb-2">Auto Garage - Smart Booking System</h3>
-                    <p className="text-gray-400">Unlocking capacity through intelligent scheduling</p>
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-2">Auto Garage - Smart Booking System</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Unlocking capacity through intelligent scheduling</p>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
                   <div>
-                    <h4 className="text-xl font-bold mb-4 text-white">Challenge</h4>
+                    <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Challenge</h4>
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex gap-2">
                         <span className="text-gray-500">•</span>
@@ -309,7 +313,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-bold mb-4 text-white">Solution</h4>
+                    <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Solution</h4>
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex gap-2">
                         <span className="text-white">✓</span>
@@ -328,8 +332,8 @@ export default function Home() {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-white/10">
-                  <h4 className="text-xl font-bold mb-6 text-white">Impact</h4>
-                  <div className="grid md:grid-cols-4 gap-6">
+                  <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-white">Impact</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                     <div className="text-center">
                       <TrendingUp className="w-10 h-10 mb-2 text-white mx-auto" strokeWidth={1.5} />
                       <p className="text-2xl font-bold text-white">40%</p>
@@ -359,14 +363,14 @@ export default function Home() {
       </section>
 
       {/* What We Do Best */}
-      <section id="services" className="py-20 px-6 border-t border-white/10 scroll-mt-24">
+      <section id="services" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-white/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">What We Do Best</h2>
-            <p className="text-xl text-gray-400">Automation that delivers real results</p>
+          <div className="mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">What We Do Best</h2>
+            <p className="text-lg sm:text-xl text-gray-400">Automation that delivers real results</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             <div className="bg-white/5 p-6 rounded-sm border border-white/10">
               <h3 className="text-xl font-bold mb-3">Process Redesign & Mapping</h3>
               <p className="text-gray-400">Uncover inefficiencies and restructure workflows</p>
@@ -411,11 +415,11 @@ export default function Home() {
       </section>
 
       {/* Why EdgeLabs */}
-      <section id="why" className="py-20 px-6 border-t border-white/10 bg-white/5 scroll-mt-24">
+      <section id="why" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-white/10 bg-white/5 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Why EdgeLabs?</h2>
-            <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-4xl mx-auto leading-relaxed">
+          <div className="mb-12 sm:mb-16 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Why EdgeLabs?</h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-3 sm:mb-4 max-w-4xl mx-auto leading-relaxed">
               We consult and co-create AI-powered systems that transform processes and shape the future of business.
             </p>
             <p className="text-lg text-gray-400 italic">
@@ -423,8 +427,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-black/50 p-8 rounded-sm border border-white/10">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
+            <div className="bg-black/50 p-6 sm:p-8 rounded-sm border border-white/10">
               <Target className="w-12 h-12 mb-4 text-white" strokeWidth={1.5} />
               <h3 className="text-2xl font-bold mb-3">Proven Track Record</h3>
               <p className="text-gray-300">
@@ -466,15 +470,15 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 border-t border-white/10 scroll-mt-24">
+      <section id="contact" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-white/10 scroll-mt-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-lg sm:text-xl text-gray-400 mb-6 sm:mb-8">
             Let&apos;s discuss how AI automation can drive efficiency and growth in your organization.
           </p>
           <a
             href="mailto:hello@edgelabs.io"
-            className="inline-block px-12 py-5 bg-white text-black text-lg font-semibold rounded-sm hover:bg-gray-200 transition-colors"
+            className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-white text-black text-base sm:text-lg font-semibold rounded-sm hover:bg-gray-200 transition-colors"
           >
             Get in Touch
           </a>
@@ -482,7 +486,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-white/10">
+      <footer className="py-8 sm:py-12 px-4 sm:px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center text-gray-500">
           <p>&copy; {new Date().getFullYear()} EdgeLabs. All rights reserved.</p>
         </div>
