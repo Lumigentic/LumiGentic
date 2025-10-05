@@ -18,6 +18,7 @@ export default function Home() {
             <a href="#how-it-works" className="hover:text-gray-300 transition-colors">How It Works</a>
             <a href="#case-studies" className="hover:text-gray-300 transition-colors">Case Studies</a>
             <a href="#services" className="hover:text-gray-300 transition-colors">Services</a>
+            <a href="#why" className="hover:text-gray-300 transition-colors">Why Us</a>
             <a href="#contact" className="hover:text-gray-300 transition-colors">Contact</a>
           </div>
         </div>
@@ -401,6 +402,56 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-3">Training & Capability Uplift</h3>
               <p className="text-gray-400">So clients aren&apos;t dependent on consultants</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why EdgeLabs */}
+      <section id="why" className="py-20 px-6 border-t border-white/10 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why EdgeLabs?</h2>
+            <p className="text-xl text-gray-400">Proven impact | Rapid delivery | Scalable growth</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-black/50 p-8 rounded-sm border border-white/10">
+              <div className="text-5xl mb-4">🎯</div>
+              <h3 className="text-2xl font-bold mb-3">Proven Track Record</h3>
+              <p className="text-gray-300">
+                15+ years delivering large-scale transformation and complex AI automation in the public and private sector
+              </p>
+            </div>
+
+            <div className="bg-black/50 p-8 rounded-sm border border-white/10">
+              <div className="text-5xl mb-4">💰</div>
+              <h3 className="text-2xl font-bold mb-3">Real Results</h3>
+              <p className="text-gray-300">
+                £3m+ savings delivered, supply chains built, digital solutions implemented
+              </p>
+            </div>
+
+            <div className="bg-black/50 p-8 rounded-sm border border-white/10">
+              <div className="text-5xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold mb-3">Boutique Scale</h3>
+              <p className="text-gray-300">
+                Hands-on expertise and rapid delivery - no corporate bureaucracy, just results
+              </p>
+            </div>
+
+            <div className="bg-black/50 p-8 rounded-sm border border-white/10">
+              <div className="text-5xl mb-4">🌐</div>
+              <h3 className="text-2xl font-bold mb-3">Scalable Network</h3>
+              <p className="text-gray-300">
+                Network of developers and automation specialists ready to scale with client needs
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 italic">
+              &quot;We build high-impact automation that frees time, reduces costs, and unlocks growth&quot;
+            </p>
           </div>
         </div>
       </section>
