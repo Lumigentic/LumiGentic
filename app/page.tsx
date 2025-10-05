@@ -1,11 +1,16 @@
+'use client';
+
 import Image from "next/image";
-import { Clock, DollarSign, Clipboard, Map, Shuffle, Search, Route, Rocket, BarChart3, Users, Hospital, Wrench, TrendingUp, Car, Calendar, Coins, Target, Zap, Globe } from "lucide-react";
+import { Clock, DollarSign, Clipboard, Map, Shuffle, Search, Route, Rocket, BarChart3, Users, Hospital, Wrench, TrendingUp, Car, Calendar, Coins, Target, Zap, Globe, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-sm z-50 border-b border-white/10">
+      <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Image
             src="/edgelabs-logo.png"
@@ -22,15 +27,62 @@ export default function Home() {
             <a href="#why" className="hover:text-gray-300 transition-colors">Why Us</a>
             <a href="#contact" className="hover:text-gray-300 transition-colors">Contact</a>
           </div>
-          {/* Mobile menu - simplified */}
-          <a href="#contact" className="md:hidden px-4 py-2 bg-white text-black text-sm font-semibold rounded-sm">
-            Contact
-          </a>
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 hover:bg-white/10 rounded transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-black/95 border-t border-white/10">
+            <div className="px-4 py-4 space-y-3">
+              <a
+                href="#how-it-works"
+                className="block py-3 px-4 hover:bg-white/10 rounded transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                How It Works
+              </a>
+              <a
+                href="#case-studies"
+                className="block py-3 px-4 hover:bg-white/10 rounded transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Case Studies
+              </a>
+              <a
+                href="#services"
+                className="block py-3 px-4 hover:bg-white/10 rounded transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a
+                href="#why"
+                className="block py-3 px-4 hover:bg-white/10 rounded transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Why Us
+              </a>
+              <a
+                href="#contact"
+                className="block py-3 px-4 bg-white text-black font-semibold rounded hover:bg-gray-200 transition-colors text-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-40 md:pt-48 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
+      <section className="pt-28 sm:pt-40 md:pt-48 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
