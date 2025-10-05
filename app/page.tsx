@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* How It Works - Workflow */}
-      <section id="how-it-works" className="py-20 px-6 border-t border-white/10">
+      <section id="how-it-works" className="py-20 px-6 border-t border-white/10 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">From Bottlenecks to Working Automation</h2>
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* Case Studies */}
-      <section id="case-studies" className="py-20 px-6 border-t border-white/10 bg-white/5">
+      <section id="case-studies" className="py-20 px-6 border-t border-white/10 bg-white/5 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Case Studies</h2>
@@ -359,7 +359,7 @@ export default function Home() {
       </section>
 
       {/* What We Do Best */}
-      <section id="services" className="py-20 px-6 border-t border-white/10">
+      <section id="services" className="py-20 px-6 border-t border-white/10 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">What We Do Best</h2>
@@ -411,7 +411,7 @@ export default function Home() {
       </section>
 
       {/* Why EdgeLabs */}
-      <section id="why" className="py-20 px-6 border-t border-white/10 bg-white/5">
+      <section id="why" className="py-20 px-6 border-t border-white/10 bg-white/5 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Why EdgeLabs?</h2>
@@ -461,7 +461,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 border-t border-white/10">
+      <section id="contact" className="py-20 px-6 border-t border-white/10 scroll-mt-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-400 mb-8">
