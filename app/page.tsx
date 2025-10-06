@@ -15,10 +15,10 @@ export default function Home() {
           <Image
             src="/edgelabs-logo.png"
             alt="EdgeLabs"
-            width={140}
-            height={32}
+            width={180}
+            height={41}
             priority
-            className="invert sm:w-[180px] sm:h-[40px]"
+            className="invert w-[140px] h-auto sm:w-[180px]"
           />
           <div className="hidden md:flex gap-8 text-sm">
             <a href="#how-it-works" className="hover:text-gray-300 transition-colors">How It Works</a>
