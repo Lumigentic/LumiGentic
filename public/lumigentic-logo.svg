@@ -1,0 +1,74 @@
+<svg viewBox="0 0 450 140" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- AI Brain/Neural Network Icon -->
+  <g transform="translate(45, 70)">
+    <!-- Outer hexagon frame - open on the right side -->
+    <g stroke="#000000" stroke-width="3.5" fill="none" stroke-linejoin="miter" stroke-linecap="round">
+      <path d="M 0,-28 L -24,-14 L -24,14 L 0,28"/>
+      <line x1="0" y1="-28" x2="24" y2="-14"/>
+      <line x1="0" y1="28" x2="24" y2="14"/>
+    </g>
+    
+    <!-- Neural network structure inside -->
+    <g opacity="0.8">
+      <!-- Input layer (left) -->
+      <circle cx="-12" cy="-8" r="3" fill="#000000"/>
+      <circle cx="-12" cy="8" r="3" fill="#000000"/>
+      
+      <!-- Hidden layer (center) -->
+      <circle cx="0" cy="-12" r="3.5" fill="#000000"/>
+      <circle cx="0" cy="0" r="4" fill="#000000"/>
+      <circle cx="0" cy="12" r="3.5" fill="#000000"/>
+      
+      <!-- Output layer (right) -->
+      <circle cx="12" cy="-8" r="3" fill="#000000"/>
+      <circle cx="12" cy="8" r="3" fill="#000000"/>
+      
+      <!-- Connections (synapses) -->
+      <g stroke="#000000" stroke-width="1.2" opacity="0.4">
+        <line x1="-12" y1="-8" x2="0" y2="-12"/>
+        <line x1="-12" y1="-8" x2="0" y2="0"/>
+        <line x1="-12" y1="-8" x2="0" y2="12"/>
+        
+        <line x1="-12" y1="8" x2="0" y2="-12"/>
+        <line x1="-12" y1="8" x2="0" y2="0"/>
+        <line x1="-12" y1="8" x2="0" y2="12"/>
+        
+        <line x1="0" y1="-12" x2="12" y2="-8"/>
+        <line x1="0" y1="-12" x2="12" y2="8"/>
+        
+        <line x1="0" y1="0" x2="12" y2="-8"/>
+        <line x1="0" y1="0" x2="12" y2="8"/>
+        
+        <line x1="0" y1="12" x2="12" y2="-8"/>
+        <line x1="0" y1="12" x2="12" y2="8"/>
+      </g>
+    </g>
+    
+    <!-- Central "intelligence" glow -->
+    <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+  </g>
+  
+  <!-- Company name -->
+  <text x="95" y="80" 
+        font-family="'Inter', 'Helvetica Neue', 'Arial', sans-serif" 
+        font-size="52" 
+        font-weight="700" 
+        fill="#000000" 
+        letter-spacing="-1">
+    LumiGentic
+  </text>
+  
+  <!-- Separator -->
+  <line x1="95" y1="95" x2="345" y2="95" stroke="#333333" stroke-width="1.5"/>
+  
+  <!-- Tagline -->
+  <text x="95" y="115" 
+        font-family="'Inter', 'Helvetica Neue', 'Arial', sans-serif" 
+        font-size="13" 
+        fill="#666666" 
+        letter-spacing="4" 
+        font-weight="400">
+    DIGITAL STRATEGY AGENCY
+  </text>
+</svg>

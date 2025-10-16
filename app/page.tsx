@@ -13,7 +13,7 @@ export default function Home() {
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Image
-            src="/lumigentic-logo.png"
+            src="/lumigentic-logo.svg"
             alt="LumiGentic"
             width={180}
             height={41}
