@@ -118,7 +118,7 @@ export default function Home() {
       </section>
 
       {/* The Problem */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 bg-black/5">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">The Problem</h2>
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
-            <div className="bg-black/50 p-6 rounded-sm border border-black/10">
+            <div className="bg-white p-6 rounded-sm border border-black/10">
               <Clock className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Manual Admin Barrier</h3>
               <p className="text-gray-600 text-sm">
@@ -136,7 +136,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-black/50 p-6 rounded-sm border border-black/10">
+            <div className="bg-white p-6 rounded-sm border border-black/10">
               <DollarSign className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Hidden Costs</h3>
               <p className="text-gray-600 text-sm">
@@ -144,7 +144,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-black/50 p-6 rounded-sm border border-black/10">
+            <div className="bg-white p-6 rounded-sm border border-black/10">
               <Clipboard className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Wasted Time</h3>
               <p className="text-gray-600 text-sm">
@@ -152,7 +152,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-black/50 p-6 rounded-sm border border-black/10">
+            <div className="bg-white p-6 rounded-sm border border-black/10">
               <Map className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Inefficient Journeys</h3>
               <p className="text-gray-600 text-sm">
@@ -160,7 +160,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-black/50 p-6 rounded-sm border border-black/10">
+            <div className="bg-white p-6 rounded-sm border border-black/10">
               <Shuffle className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
               <h3 className="text-lg font-bold mb-2">Siloed Systems</h3>
               <p className="text-gray-600 text-sm">
@@ -249,7 +249,7 @@ export default function Home() {
       </section>
 
       {/* Case Studies */}
-      <section id="case-studies" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 bg-black/5 scroll-mt-24">
+      <section id="case-studies" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Case Studies</h2>
@@ -258,7 +258,7 @@ export default function Home() {
 
           <div className="space-y-8 sm:space-y-12">
             {/* NHS Case Study */}
-            <div className="bg-black/50 rounded-sm border border-black/10 overflow-hidden">
+            <div className="bg-white rounded-sm border border-black/10 overflow-hidden">
               <div className="p-4 sm:p-6 md:p-8">
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <Hospital className="w-12 h-12 sm:w-14 sm:h-14 text-black flex-shrink-0" strokeWidth={1.5} />
@@ -343,7 +343,7 @@ export default function Home() {
             </div>
 
             {/* SME Case Study */}
-            <div className="bg-black/50 rounded-sm border border-black/10 overflow-hidden">
+            <div className="bg-white rounded-sm border border-black/10 overflow-hidden">
               <div className="p-4 sm:p-6 md:p-8">
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <Wrench className="w-12 h-12 sm:w-14 sm:h-14 text-black flex-shrink-0" strokeWidth={1.5} />
@@ -834,7 +834,7 @@ export default function Home() {
       </section>
 
       {/* Why LumiGentic */}
-      <section id="why" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 bg-black/5 scroll-mt-24">
+      <section id="why" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16 text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Why LumiGentic?</h2>
@@ -847,7 +847,7 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
-            <div className="bg-black/50 p-6 sm:p-8 rounded-sm border border-black/10">
+            <div className="bg-white p-6 sm:p-8 rounded-sm border border-black/10">
               <Target className="w-12 h-12 mb-4 text-black" strokeWidth={1.5} />
               <h3 className="text-2xl font-bold mb-3">Proven Track Record</h3>
               <p className="text-gray-700">
@@ -855,7 +855,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-black/50 p-8 rounded-sm border border-black/10">
+            <div className="bg-white p-8 rounded-sm border border-black/10">
               <DollarSign className="w-12 h-12 mb-4 text-black" strokeWidth={1.5} />
               <h3 className="text-2xl font-bold mb-3">Real Results</h3>
               <p className="text-gray-700">
@@ -863,7 +863,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-black/50 p-8 rounded-sm border border-black/10">
+            <div className="bg-white p-8 rounded-sm border border-black/10">
               <Zap className="w-12 h-12 mb-4 text-black" strokeWidth={1.5} />
               <h3 className="text-2xl font-bold mb-3">Boutique Scale</h3>
               <p className="text-gray-700">
@@ -871,7 +871,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-black/50 p-8 rounded-sm border border-black/10">
+            <div className="bg-white p-8 rounded-sm border border-black/10">
               <Globe className="w-12 h-12 mb-4 text-black" strokeWidth={1.5} />
               <h3 className="text-2xl font-bold mb-3">Scalable Network</h3>
               <p className="text-gray-700">
