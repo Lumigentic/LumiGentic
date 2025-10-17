@@ -896,7 +896,7 @@ export default function Home() {
             Let&apos;s discuss how AI automation can drive efficiency and growth in your organization.
           </p>
           <a
-            href="mailto:hello@lumigentic.io"
+            href="mailto:info@lumigentic.com"
             className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-black text-white text-base sm:text-lg font-semibold rounded-sm hover:bg-gray-800 transition-colors"
           >
             Get in Touch
