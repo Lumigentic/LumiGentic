@@ -15,10 +15,10 @@ export default function Home() {
           <Image
             src="/lumigentic-logo.svg"
             alt="LumiGentic"
-            width={180}
-            height={41}
+            width={240}
+            height={55}
             priority
-            className="w-[140px] h-auto sm:w-[180px]"
+            className="w-[180px] h-auto sm:w-[240px]"
           />
           <div className="hidden md:flex gap-8 text-sm">
             <a href="#how-it-works" className="hover:text-gray-700 transition-colors">How It Works</a>
