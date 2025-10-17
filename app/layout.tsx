@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "LumiGentic - Let's Co-Create Your Next AI-Powered System",
-  description: "Let's co-create AI-powered systems that transform processes and shape the future of your business. High-impact automation that cuts waste and turns inefficiencies into productivity gains.",
+  description: "LumiGentic - Let's Co-Create Your Next AI-Powered System",
   keywords: ["AI automation", "process automation", "business efficiency", "AI integration", "digital transformation", "workflow automation", "consulting"],
   authors: [{ name: "LumiGentic" }],
   openGraph: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://lumigentic.com",
     siteName: "LumiGentic",
     title: "LumiGentic - Let's Co-Create Your Next AI-Powered System",
-    description: "Let's co-create AI-powered systems that transform processes and shape the future of your business.",
+    description: "LumiGentic - Let's Co-Create Your Next AI-Powered System",
     images: [
       {
         url: "https://lumigentic.com/lumigentic-logo.svg",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "LumiGentic - Let's Co-Create Your Next AI-Powered System",
-    description: "Let's co-create AI-powered systems that transform processes and shape the future of your business.",
+    description: "LumiGentic - Let's Co-Create Your Next AI-Powered System",
     images: ["https://lumigentic.com/lumigentic-logo.svg"],
   },
   robots: {
