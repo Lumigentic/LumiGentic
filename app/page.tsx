@@ -102,7 +102,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
                 href="#contact"
-                className="px-6 sm:px-8 py-3 sm:py-4 bg-black text-black font-semibold rounded-sm hover:bg-gray-800 transition-colors text-center"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-black text-white font-semibold rounded-sm hover:bg-gray-800 transition-colors text-center"
               >
                 Start Your Journey
               </a>
