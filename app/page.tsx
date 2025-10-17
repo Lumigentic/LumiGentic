@@ -93,10 +93,10 @@ export default function Home() {
       <section className="pt-32 sm:pt-40 md:pt-48 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
               High-impact automation.
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6 sm:mb-8 max-w-3xl">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 max-w-3xl">
               Solutions that cut wasted time, reduce costs, and scale your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -121,7 +121,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">The Problem</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">The Problem</h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-700">
               Manual processes, bottlenecks, and inefficiencies drain capacity, slow growth, and frustrate teams.
             </p>
@@ -184,8 +184,8 @@ export default function Home() {
       <section id="how-it-works" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16 text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">From Bottlenecks to Working Automation</h2>
-            <p className="text-lg sm:text-xl text-gray-600 italic">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">From Bottlenecks to Working Automation</h2>
+            <p className="text-base sm:text-lg text-gray-600 italic">
               &quot;We diagnose. We design. We build. We optimise. We empower.&quot;
             </p>
           </div>
@@ -252,8 +252,8 @@ export default function Home() {
       <section id="case-studies" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Case Studies</h2>
-            <p className="text-lg sm:text-xl text-gray-600">Real impact, delivered.</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Case Studies</h2>
+            <p className="text-base sm:text-lg text-gray-600">Real impact, delivered.</p>
           </div>
 
           <div className="space-y-8 sm:space-y-12">
@@ -263,7 +263,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <Hospital className="w-12 h-12 sm:w-14 sm:h-14 text-black flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="text-2xl sm:text-3xl font-bold mb-2">NHS Autism Diagnostic Pathway</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2">NHS Autism Diagnostic Pathway</h3>
                     <p className="text-sm sm:text-base text-gray-600">Transforming diagnostic efficiency with AI automation</p>
                   </div>
                 </div>
@@ -348,7 +348,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <Wrench className="w-12 h-12 sm:w-14 sm:h-14 text-black flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="text-2xl sm:text-3xl font-bold mb-2">Auto Garage - Smart Booking System</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2">Auto Garage - Smart Booking System</h3>
                     <p className="text-sm sm:text-base text-gray-600">Unlocking capacity through intelligent scheduling</p>
                   </div>
                 </div>
@@ -426,7 +426,7 @@ export default function Home() {
       <section id="market-signals" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Market Signals</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Market Signals</h2>
             <p className="text-lg sm:text-xl text-gray-600 italic mb-6">
               Where data meets disruption - insights from the front lines of AI adoption.
             </p>
@@ -439,7 +439,7 @@ export default function Home() {
           <div className="space-y-8">
             {/* Story 1: Contact-centre Copilot */}
             <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Contact-centre Copilot: &quot;Assist, don&apos;t replace&quot;
               </h3>
 
@@ -482,7 +482,7 @@ export default function Home() {
 
             {/* Story 2: Klarna Support Automation */}
             <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 End-to-End Support Automation (Klarna)
               </h3>
 
@@ -525,7 +525,7 @@ export default function Home() {
 
             {/* Story 3: Developer Copilot */}
             <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Developer Copilot: Keeping devs in the flow
               </h3>
 
@@ -564,7 +564,7 @@ export default function Home() {
 
             {/* Story 4: Microsoft 365 Copilot */}
             <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Microsoft 365 Copilot for Government
               </h3>
 
@@ -603,7 +603,7 @@ export default function Home() {
 
             {/* Story 5: Amazon AI + Robotics */}
             <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Amazon&apos;s Next-Gen AI + Robotics
               </h3>
 
@@ -642,7 +642,7 @@ export default function Home() {
 
             {/* Story 6: John Lewis DC Modernisation */}
             <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 John Lewis DC Modernisation
               </h3>
 
@@ -672,7 +672,7 @@ export default function Home() {
 
             {/* Story 7: Lemonade's Instant Claims */}
             <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Lemonade&apos;s Instant Claims
               </h3>
 
@@ -711,7 +711,7 @@ export default function Home() {
 
             {/* Story 8: Zurich's CAT Claims Triage */}
             <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Zurich&apos;s CAT Claims Triage (CATIA)
               </h3>
 
@@ -746,7 +746,7 @@ export default function Home() {
 
             {/* Story 9: Process Mining + Automation */}
             <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Process Mining + Automation in Finance Ops
               </h3>
 
@@ -785,8 +785,8 @@ export default function Home() {
       <section id="services" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">What We Do Best</h2>
-            <p className="text-lg sm:text-xl text-gray-600">Automation that delivers real results</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">What We Do Best</h2>
+            <p className="text-base sm:text-lg text-gray-600">Automation that delivers real results</p>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
@@ -837,11 +837,11 @@ export default function Home() {
       <section id="why" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16 text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Why LumiGentic?</h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-800 mb-3 sm:mb-4 max-w-4xl mx-auto leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Why LumiGentic?</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-3 sm:mb-4 max-w-4xl mx-auto leading-relaxed">
               We consult and co-create AI-powered systems that transform processes and shape the future of business.
             </p>
-            <p className="text-lg text-gray-600 italic">
+            <p className="text-base text-gray-600 italic">
               Innovation and intelligent optimisation are in our DNA.
             </p>
           </div>
@@ -891,8 +891,8 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
             Let&apos;s discuss how AI automation can drive efficiency and growth in your organization.
           </p>
           <a
