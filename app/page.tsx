@@ -438,7 +438,17 @@ export default function Home() {
           {/* Stories */}
           <div className="space-y-8">
             {/* Story 1: Contact-centre Copilot */}
-            <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
+            <div className="relative overflow-hidden text-white rounded-lg shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/casestudybackground.jpg"
+                  alt=""
+                  fill
+                  className="object-cover blur-sm"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+              </div>
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Contact-centre Copilot: &quot;Assist, don&apos;t replace&quot;
               </h3>
@@ -478,10 +488,21 @@ export default function Home() {
                   Efficiency
                 </div>
               </div>
+              </div>
             </div>
 
             {/* Story 2: Klarna Support Automation */}
-            <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
+            <div className="relative overflow-hidden text-white rounded-lg shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/casestudybackground.jpg"
+                  alt=""
+                  fill
+                  className="object-cover blur-sm"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+              </div>
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 End-to-End Support Automation (Klarna)
               </h3>
@@ -521,10 +542,21 @@ export default function Home() {
                   Speed
                 </div>
               </div>
+              </div>
             </div>
 
             {/* Story 3: Developer Copilot */}
-            <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
+            <div className="relative overflow-hidden text-white rounded-lg shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/casestudybackground.jpg"
+                  alt=""
+                  fill
+                  className="object-cover blur-sm"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+              </div>
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Developer Copilot: Keeping devs in the flow
               </h3>
@@ -560,10 +592,21 @@ export default function Home() {
                   Precision
                 </div>
               </div>
+              </div>
             </div>
 
             {/* Story 4: Microsoft 365 Copilot */}
-            <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
+            <div className="relative overflow-hidden text-white rounded-lg shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/casestudybackground.jpg"
+                  alt=""
+                  fill
+                  className="object-cover blur-sm"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+              </div>
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Microsoft 365 Copilot for Government
               </h3>
@@ -599,10 +642,21 @@ export default function Home() {
                   Insight
                 </div>
               </div>
+              </div>
             </div>
 
             {/* Story 5: Amazon AI + Robotics */}
-            <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
+            <div className="relative overflow-hidden text-white rounded-lg shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/casestudybackground.jpg"
+                  alt=""
+                  fill
+                  className="object-cover blur-sm"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+              </div>
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Amazon&apos;s Next-Gen AI + Robotics
               </h3>
@@ -638,10 +692,21 @@ export default function Home() {
                   Scale
                 </div>
               </div>
+              </div>
             </div>
 
             {/* Story 6: John Lewis DC Modernisation */}
-            <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
+            <div className="relative overflow-hidden text-white rounded-lg shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/casestudybackground.jpg"
+                  alt=""
+                  fill
+                  className="object-cover blur-sm"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+              </div>
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 John Lewis DC Modernisation
               </h3>
@@ -668,10 +733,21 @@ export default function Home() {
                   Optimisation
                 </div>
               </div>
+              </div>
             </div>
 
             {/* Story 7: Lemonade's Instant Claims */}
-            <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
+            <div className="relative overflow-hidden text-white rounded-lg shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/casestudybackground.jpg"
+                  alt=""
+                  fill
+                  className="object-cover blur-sm"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+              </div>
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Lemonade&apos;s Instant Claims
               </h3>
@@ -707,10 +783,21 @@ export default function Home() {
                   Transparency
                 </div>
               </div>
+              </div>
             </div>
 
             {/* Story 8: Zurich's CAT Claims Triage */}
-            <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
+            <div className="relative overflow-hidden text-white rounded-lg shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/casestudybackground.jpg"
+                  alt=""
+                  fill
+                  className="object-cover blur-sm"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+              </div>
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Zurich&apos;s CAT Claims Triage (CATIA)
               </h3>
@@ -742,10 +829,21 @@ export default function Home() {
                   Consistency
                 </div>
               </div>
+              </div>
             </div>
 
             {/* Story 9: Process Mining + Automation */}
-            <div className="bg-black text-white rounded-lg p-6 sm:p-8 md:p-10 shadow-lg">
+            <div className="relative overflow-hidden text-white rounded-lg shadow-lg">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/casestudybackground.jpg"
+                  alt=""
+                  fill
+                  className="object-cover blur-sm"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+              </div>
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 Process Mining + Automation in Finance Ops
               </h3>
@@ -775,6 +873,7 @@ export default function Home() {
                 <div className="bg-[#e5e5e5] text-[#0d0d0d] px-4 sm:px-6 py-2 sm:py-3 rounded-md text-sm sm:text-base font-medium flex-1 sm:flex-initial min-w-0 sm:min-w-[120px] text-center">
                   ROI
                 </div>
+              </div>
               </div>
             </div>
           </div>
