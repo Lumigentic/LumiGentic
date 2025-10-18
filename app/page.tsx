@@ -444,7 +444,7 @@ export default function Home() {
                   src="/casestudybackground.jpg"
                   alt=""
                   fill
-                  className="object-cover blur-sm"
+                  className="object-cover blur-[2px]"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
               </div>
@@ -498,7 +498,7 @@ export default function Home() {
                   src="/casestudybackground.jpg"
                   alt=""
                   fill
-                  className="object-cover blur-sm"
+                  className="object-cover blur-[2px]"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
               </div>
@@ -552,7 +552,7 @@ export default function Home() {
                   src="/casestudybackground.jpg"
                   alt=""
                   fill
-                  className="object-cover blur-sm"
+                  className="object-cover blur-[2px]"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
               </div>
@@ -602,7 +602,7 @@ export default function Home() {
                   src="/casestudybackground.jpg"
                   alt=""
                   fill
-                  className="object-cover blur-sm"
+                  className="object-cover blur-[2px]"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
               </div>
@@ -652,7 +652,7 @@ export default function Home() {
                   src="/casestudybackground.jpg"
                   alt=""
                   fill
-                  className="object-cover blur-sm"
+                  className="object-cover blur-[2px]"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
               </div>
@@ -702,7 +702,7 @@ export default function Home() {
                   src="/casestudybackground.jpg"
                   alt=""
                   fill
-                  className="object-cover blur-sm"
+                  className="object-cover blur-[2px]"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
               </div>
@@ -743,7 +743,7 @@ export default function Home() {
                   src="/casestudybackground.jpg"
                   alt=""
                   fill
-                  className="object-cover blur-sm"
+                  className="object-cover blur-[2px]"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
               </div>
@@ -793,7 +793,7 @@ export default function Home() {
                   src="/casestudybackground.jpg"
                   alt=""
                   fill
-                  className="object-cover blur-sm"
+                  className="object-cover blur-[2px]"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
               </div>
@@ -839,7 +839,7 @@ export default function Home() {
                   src="/casestudybackground.jpg"
                   alt=""
                   fill
-                  className="object-cover blur-sm"
+                  className="object-cover blur-[2px]"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
               </div>
