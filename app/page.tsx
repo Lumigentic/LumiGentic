@@ -20,7 +20,7 @@ export default function Home() {
             priority
             className="w-[180px] h-auto sm:w-[240px]"
           />
-          <div className="hidden md:flex gap-8 text-sm">
+          <div className="hidden md:flex gap-8 text-base font-medium">
             <a href="#how-it-works" className="hover:text-gray-700 transition-colors">How It Works</a>
             <a href="#case-studies" className="hover:text-gray-700 transition-colors">Case Studies</a>
             <a href="#market-signals" className="hover:text-gray-700 transition-colors">Market Signals</a>
