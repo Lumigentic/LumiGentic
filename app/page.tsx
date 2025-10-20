@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Clock, DollarSign, Clipboard, Map, Shuffle, Search, Route, Rocket, BarChart3, Users, Hospital, Wrench, TrendingUp, Car, Calendar, Coins, Target, Zap, Globe, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -237,11 +238,19 @@ export default function Home() {
             ].map((step, idx) => {
               const IconComponent = step.icon;
               return (
-                <div key={idx} className="bg-black/5 p-6 rounded-sm border border-black/10 hover:bg-black/10 transition-colors">
-                  <IconComponent className="w-12 h-12 mb-4 text-black" strokeWidth={1.5} />
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-sm text-gray-600 mb-4">{step.subtitle}</p>
-                  <div className="pt-4 border-t border-black/10">
+                <div key={idx} className="relative bg-black/5 p-6 rounded-lg border border-black/10 hover:bg-black/10 transition-colors">
+                  <GlowingEffect
+                    spread={40}
+                    glow={true}
+                    disabled={false}
+                    proximity={80}
+                    inactiveZone={0.3}
+                    borderWidth={2}
+                  />
+                  <IconComponent className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+                  <h3 className="text-xl font-bold mb-2 relative z-10">{step.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4 relative z-10">{step.subtitle}</p>
+                  <div className="pt-4 border-t border-black/10 relative z-10">
                     <p className="text-xs text-gray-500 font-semibold">DELIVERABLE</p>
                     <p className="text-sm text-gray-700 mt-1">{step.deliverable}</p>
                   </div>
