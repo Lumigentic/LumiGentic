@@ -921,44 +921,108 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-            <div className="bg-black/5 p-6 rounded-sm border border-black/10">
-              <h3 className="text-xl font-bold mb-3">Process Redesign & Mapping</h3>
-              <p className="text-gray-600">Uncover inefficiencies and restructure workflows</p>
+            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <h3 className="text-xl font-bold mb-3 relative z-10">Process Redesign & Mapping</h3>
+              <p className="text-gray-600 relative z-10">Uncover inefficiencies and restructure workflows</p>
             </div>
 
-            <div className="bg-black/5 p-6 rounded-sm border border-black/10">
-              <h3 className="text-xl font-bold mb-3">Automation Strategy</h3>
-              <p className="text-gray-600">Define the ROI and prioritise the quick wins</p>
+            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <h3 className="text-xl font-bold mb-3 relative z-10">Automation Strategy</h3>
+              <p className="text-gray-600 relative z-10">Define the ROI and prioritise the quick wins</p>
             </div>
 
-            <div className="bg-black/5 p-6 rounded-sm border border-black/10">
-              <h3 className="text-xl font-bold mb-3">AI Integration</h3>
-              <p className="text-gray-600">Apply speech-to-text, auto-scoring, and generative AI to real processes</p>
+            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <h3 className="text-xl font-bold mb-3 relative z-10">AI Integration</h3>
+              <p className="text-gray-600 relative z-10">Apply speech-to-text, auto-scoring, and generative AI to real processes</p>
             </div>
 
-            <div className="bg-black/5 p-6 rounded-sm border border-black/10">
-              <h3 className="text-xl font-bold mb-3">Bespoke Automation Builds</h3>
-              <p className="text-gray-600">Booking, invoicing, reporting, scheduling systems</p>
+            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <h3 className="text-xl font-bold mb-3 relative z-10">Bespoke Automation Builds</h3>
+              <p className="text-gray-600 relative z-10">Booking, invoicing, reporting, scheduling systems</p>
             </div>
 
-            <div className="bg-black/5 p-6 rounded-sm border border-black/10">
-              <h3 className="text-xl font-bold mb-3">Custom Dashboards & Analytics</h3>
-              <p className="text-gray-600">Real-time performance visibility</p>
+            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <h3 className="text-xl font-bold mb-3 relative z-10">Custom Dashboards & Analytics</h3>
+              <p className="text-gray-600 relative z-10">Real-time performance visibility</p>
             </div>
 
-            <div className="bg-black/5 p-6 rounded-sm border border-black/10">
-              <h3 className="text-xl font-bold mb-3">AI Copilots & Agents</h3>
-              <p className="text-gray-600">Handling repetitive tasks and decisions</p>
+            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <h3 className="text-xl font-bold mb-3 relative z-10">AI Copilots & Agents</h3>
+              <p className="text-gray-600 relative z-10">Handling repetitive tasks and decisions</p>
             </div>
 
-            <div className="bg-black/5 p-6 rounded-sm border border-black/10">
-              <h3 className="text-xl font-bold mb-3">Workflow Integrations</h3>
-              <p className="text-gray-600">Connecting tools like Airtable, Power Automate, Python builds</p>
+            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <h3 className="text-xl font-bold mb-3 relative z-10">Workflow Integrations</h3>
+              <p className="text-gray-600 relative z-10">Connecting tools like Airtable, Power Automate, Python builds</p>
             </div>
 
-            <div className="bg-black/5 p-6 rounded-sm border border-black/10">
-              <h3 className="text-xl font-bold mb-3">Training & Capability Uplift</h3>
-              <p className="text-gray-600">So clients aren&apos;t dependent on consultants</p>
+            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <h3 className="text-xl font-bold mb-3 relative z-10">Training & Capability Uplift</h3>
+              <p className="text-gray-600 relative z-10">So clients aren&apos;t dependent on consultants</p>
             </div>
           </div>
         </div>
@@ -978,34 +1042,66 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
-            <div className="bg-white p-6 sm:p-8 rounded-sm border border-black/10">
-              <Target className="w-12 h-12 mb-4 text-black" strokeWidth={1.5} />
-              <h3 className="text-2xl font-bold mb-3">Proven Track Record</h3>
-              <p className="text-gray-700">
+            <div className="relative bg-white p-6 sm:p-8 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <Target className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-2xl font-bold mb-3 relative z-10">Proven Track Record</h3>
+              <p className="text-gray-700 relative z-10">
                 15+ years delivering large-scale transformation and complex AI automation in the public and private sector
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-sm border border-black/10">
-              <DollarSign className="w-12 h-12 mb-4 text-black" strokeWidth={1.5} />
-              <h3 className="text-2xl font-bold mb-3">Real Results</h3>
-              <p className="text-gray-700">
+            <div className="relative bg-white p-8 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <DollarSign className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-2xl font-bold mb-3 relative z-10">Real Results</h3>
+              <p className="text-gray-700 relative z-10">
                 £3m+ savings delivered, supply chains built, digital solutions implemented
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-sm border border-black/10">
-              <Zap className="w-12 h-12 mb-4 text-black" strokeWidth={1.5} />
-              <h3 className="text-2xl font-bold mb-3">Boutique Scale</h3>
-              <p className="text-gray-700">
+            <div className="relative bg-white p-8 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <Zap className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-2xl font-bold mb-3 relative z-10">Boutique Scale</h3>
+              <p className="text-gray-700 relative z-10">
                 Hands-on expertise and rapid delivery - no corporate bureaucracy, just results
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-sm border border-black/10">
-              <Globe className="w-12 h-12 mb-4 text-black" strokeWidth={1.5} />
-              <h3 className="text-2xl font-bold mb-3">Scalable Network</h3>
-              <p className="text-gray-700">
+            <div className="relative bg-white p-8 rounded-lg border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <Globe className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-2xl font-bold mb-3 relative z-10">Scalable Network</h3>
+              <p className="text-gray-700 relative z-10">
                 Network of developers and automation specialists ready to scale with client needs
               </p>
             </div>
