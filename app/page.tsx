@@ -92,8 +92,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-32 sm:pt-40 md:pt-48 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+            <div className="max-w-4xl order-2 md:order-1">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                 High-impact automation.
               </h1>
@@ -115,7 +115,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="hidden md:block">
+            <div className="order-1 md:order-2">
               <Image
                 src="/digitaltransformation1.webp"
                 alt="Digital Transformation"
@@ -895,12 +895,12 @@ export default function Home() {
       {/* What We Do Best */}
       <section id="services" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 sm:mb-16">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center mb-12 sm:mb-16">
+            <div className="order-2 md:order-1">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">What We Do Best</h2>
               <p className="text-base sm:text-lg text-gray-600">Automation that delivers real results</p>
             </div>
-            <div className="hidden md:block">
+            <div className="order-1 md:order-2">
               <Image
                 src="/digitalautomation1.jpg"
                 alt="Digital Automation"

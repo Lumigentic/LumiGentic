@@ -1,0 +1,7 @@
+# robots.txt for lumigentic.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lumigentic.com/sitemap.xml
