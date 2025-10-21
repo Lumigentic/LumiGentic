@@ -189,7 +189,7 @@ const ShaderBackground = () => {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    let startTime = Date.now();
+    const startTime = Date.now();
     let animationFrameId: number;
 
     const render = () => {
