@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Clock, DollarSign, Clipboard, Map, Shuffle, Search, Route, Rocket, BarChart3, Users, Hospital, Wrench, TrendingUp, Car, Calendar, Coins, Target, Zap, Globe, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { SparklesPreview } from "@/components/sparkles-demo";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -91,42 +92,33 @@ export default function Home() {
         )}
       </nav>
 
+      {/* Sparkles Hero Section */}
+      <section className="pt-20 sm:pt-24 md:pt-28 pb-0">
+        <SparklesPreview />
+      </section>
+
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-40 md:pt-48 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-            <div className="max-w-4xl order-2 md:order-1">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-                High-impact automation.
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 max-w-3xl">
-                Solutions that cut wasted time, reduce costs, and scale your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a
-                  href="#contact"
-                  className="px-6 sm:px-8 py-3 sm:py-4 bg-black text-white font-semibold rounded-sm hover:bg-gray-800 transition-colors text-center"
-                >
-                  Start Your Journey
-                </a>
-                <a
-                  href="#how-it-works"
-                  className="px-6 sm:px-8 py-3 sm:py-4 border border-black/20 font-semibold rounded-sm hover:bg-black/10 transition-colors text-center"
-                >
-                  See How It Works
-                </a>
-              </div>
-            </div>
-            <div className="order-1 md:order-2">
-              <Image
-                src="/digitaltransformation1.webp"
-                alt="Digital Transformation"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-2xl"
-                priority
-              />
-            </div>
+      <section className="pt-12 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+            High-impact automation.
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8">
+            Solutions that cut wasted time, reduce costs, and scale your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <a
+              href="#contact"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-black text-white font-semibold rounded-sm hover:bg-gray-800 transition-colors text-center"
+            >
+              Start Your Journey
+            </a>
+            <a
+              href="#how-it-works"
+              className="px-6 sm:px-8 py-3 sm:py-4 border border-black/20 font-semibold rounded-sm hover:bg-black/10 transition-colors text-center"
+            >
+              See How It Works
+            </a>
           </div>
         </div>
       </section>
@@ -447,20 +439,9 @@ export default function Home() {
       {/* What We Do Best */}
       <section id="services" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center mb-12 sm:mb-16">
-            <div className="order-2 md:order-1">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">What We Do Best</h2>
-              <p className="text-base sm:text-lg text-gray-600">Automation that delivers real results</p>
-            </div>
-            <div className="order-1 md:order-2">
-              <Image
-                src="/digitalautomation1.jpg"
-                alt="Digital Automation"
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
-            </div>
+          <div className="mb-12 sm:mb-16 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">What We Do Best</h2>
+            <p className="text-base sm:text-lg text-gray-600">Automation that delivers real results</p>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
