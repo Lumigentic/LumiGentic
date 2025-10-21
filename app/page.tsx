@@ -126,7 +126,7 @@ export default function Home() {
       {/* The Problem */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-8 sm:mb-12">
+          <div className="mb-8 sm:mb-12 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">The Problem</h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-700">
               Manual processes, bottlenecks, and inefficiencies drain capacity, slow growth, and frustrate teams.
@@ -305,7 +305,7 @@ export default function Home() {
       {/* Case Studies */}
       <section id="case-studies" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12 sm:mb-16">
+          <div className="mb-12 sm:mb-16 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Case Studies</h2>
             <p className="text-base sm:text-lg text-gray-600">Real impact, delivered.</p>
           </div>
