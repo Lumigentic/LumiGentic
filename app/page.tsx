@@ -134,42 +134,82 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
-            <div className="bg-white p-6 rounded-sm border border-black/10">
-              <Clock className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2">Manual Admin Barrier</h3>
-              <p className="text-gray-600 text-sm">
+            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <Clock className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold mb-2 relative z-10">Manual Admin Barrier</h3>
+              <p className="text-gray-600 text-sm relative z-10">
                 40% of UK SMEs cite manual admin as their #1 barrier to growth
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-sm border border-black/10">
-              <DollarSign className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2">Hidden Costs</h3>
-              <p className="text-gray-600 text-sm">
+            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <DollarSign className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold mb-2 relative z-10">Hidden Costs</h3>
+              <p className="text-gray-600 text-sm relative z-10">
                 Storage, errors, delays, and lost revenue pile up
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-sm border border-black/10">
-              <Clipboard className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2">Wasted Time</h3>
-              <p className="text-gray-600 text-sm">
+            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <Clipboard className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold mb-2 relative z-10">Wasted Time</h3>
+              <p className="text-gray-600 text-sm relative z-10">
                 The average SME employee wastes 6+ hours/week on avoidable tasks
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-sm border border-black/10">
-              <Map className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2">Inefficient Journeys</h3>
-              <p className="text-gray-600 text-sm">
+            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <Map className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold mb-2 relative z-10">Inefficient Journeys</h3>
+              <p className="text-gray-600 text-sm relative z-10">
                 Bookings, enquiries, or sales processes are inefficient
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-sm border border-black/10">
-              <Shuffle className="w-10 h-10 mb-3 text-black" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2">Siloed Systems</h3>
-              <p className="text-gray-600 text-sm">
+            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.3}
+                borderWidth={2}
+              />
+              <Shuffle className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-lg font-bold mb-2 relative z-10">Siloed Systems</h3>
+              <p className="text-gray-600 text-sm relative z-10">
                 Tools don&apos;t talk to each other, causing duplication and errors
               </p>
             </div>
