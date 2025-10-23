@@ -1,0 +1,48 @@
+name: Discover & Publish Automation Ideas
+
+on:
+  # Run daily at 2am UTC
+  schedule:
+    - cron: '0 2 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  discover-and-publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Required to push commits
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure Git
+        run: |
+          git config user.name "LumiGentic Automation Agent"
+          git config user.email "automation-agent@lumigentic.com"
+
+      - name: Run automation discovery pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: npm run discover-ideas
+
+      - name: Check for deployment
+        run: |
+          echo "✅ Pipeline completed. New ideas (if any) have been committed and pushed."
+          echo "Vercel will automatically deploy the updated site."
