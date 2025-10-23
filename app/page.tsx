@@ -27,8 +27,8 @@ export default function Home() {
             <a href="#how-it-works" className="hover:text-gray-700 transition-colors">How It Works</a>
             <a href="#case-studies" className="hover:text-gray-700 transition-colors">Case Studies</a>
             <Link href="/market-signals" className="hover:text-gray-700 transition-colors">Market Signals</Link>
+            <Link href="/automation-ideas" className="hover:text-gray-700 transition-colors">Automation Ideas</Link>
             <a href="#services" className="hover:text-gray-700 transition-colors">Services</a>
-            <a href="#why" className="hover:text-gray-700 transition-colors">Why Us</a>
             <a href="#contact" className="hover:text-gray-700 transition-colors">Contact</a>
           </div>
           {/* Mobile menu button */}
@@ -65,6 +65,13 @@ export default function Home() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Market Signals
+              </Link>
+              <Link
+                href="/automation-ideas"
+                className="block py-3 px-4 hover:bg-black/10 rounded transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Automation Ideas
               </Link>
               <a
                 href="#services"
