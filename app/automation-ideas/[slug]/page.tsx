@@ -1,10 +1,29 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowLeft, Clock, DollarSign, TrendingUp, Wrench, ExternalLink, Calendar } from 'lucide-react';
 import { AutomationIdeaNav } from './AutomationIdeaNav';
 
+interface AutomationIdeaData {
+  title: string;
+  industry: string;
+  difficulty: string;
+  roiScore: number;
+  timeSaved: string;
+  costSavings: string;
+  paybackPeriod: string;
+  productivityGain?: string;
+  tools: string[];
+  publishedDate: string;
+  sourceUrl: string;
+  content: {
+    problem: string;
+    solution: string[];
+    considerations: string[];
+    proof: string;
+  };
+}
+
 // Static data for now - will be replaced with dynamic MDX content
-const automationIdeasData: Record<string, any> = {
+const automationIdeasData: Record<string, AutomationIdeaData> = {
   'automate-patient-referral-processing-nhs': {
     title: 'Automate Patient Referral Processing with Microsoft Power Platform',
     industry: 'Healthcare',
@@ -103,14 +122,15 @@ const automationIdeasData: Record<string, any> = {
 };
 
 // Generate static paths for all automation ideas
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return Object.keys(automationIdeasData).map((slug) => ({
     slug,
   }));
 }
 
-export default function AutomationIdeaPage({ params }: { params: { slug: string } }) {
-  const idea = automationIdeasData[params.slug];
+export default async function AutomationIdeaPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const idea = automationIdeasData[slug];
 
   if (!idea) {
     return (
