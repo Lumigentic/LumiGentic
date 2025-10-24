@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "discover-ideas": "tsx scripts/automation-agent/index.ts"
+    "discover-ideas": "tsx scripts/automation-agent/index.ts",
+    "discover-with-claude": "tsx scripts/discover-with-claude.ts"
   },
   "dependencies": {
     "@splinetool/react-spline": "^4.1.0",
