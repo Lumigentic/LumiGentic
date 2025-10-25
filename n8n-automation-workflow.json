@@ -1,0 +1,192 @@
+{
+  "name": "LumiGentic - Automation Ideas Discovery",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 3 * * *"
+            }
+          ]
+        }
+      },
+      "name": "Schedule Trigger - 3am Daily",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $credentials.anthropicApiKey }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "claude-sonnet-4-20250514"
+            },
+            {
+              "name": "max_tokens",
+              "value": 8000
+            },
+            {
+              "name": "messages",
+              "value": "=[{\"role\": \"user\", \"content\": \"You are an expert automation consultant researching real-world automation success stories.\\n\\nYour task: Find 3 high-quality automation opportunities with proven ROI that would be valuable for UK businesses.\\n\\nREQUIREMENTS:\\n1. Focus on REAL case studies with concrete numbers (time saved, cost reduction, etc.)\\n2. Prioritize recent success stories (2023-2025)\\n3. Include diverse industries (healthcare, finance, retail, manufacturing, etc.)\\n4. Each idea must have:\\n   - Clear problem statement\\n   - Measurable ROI metrics\\n   - Specific tools/platforms used\\n   - Proof of success (company name + results)\\n   - Source URL to verify\\n\\nTRUSTED SOURCES TO SEARCH:\\n- McKinsey, BCG, Bain consulting reports\\n- Gartner, Forrester research\\n- UiPath, Microsoft, AWS case studies\\n- NHS Digital case studies\\n- Harvard Business Review\\n- Industry-specific publications\\n\\nOUTPUT FORMAT (JSON array):\\n[\\n  {\\n    \\\"title\\\": \\\"Automate X Process to Save Y Hours\\\",\\n    \\\"slug\\\": \\\"automate-x-process-save-y-hours\\\",\\n    \\\"industry\\\": \\\"Healthcare\\\" | \\\"Finance\\\" | \\\"Retail\\\" | \\\"Manufacturing\\\" | \\\"Contact Center\\\" | etc.,\\n    \\\"difficulty\\\": \\\"Easy\\\" | \\\"Medium\\\" | \\\"Hard\\\",\\n    \\\"roiScore\\\": 1-10,\\n    \\\"timeSaved\\\": \\\"e.g. 17 minutes per transaction\\\",\\n    \\\"costSavings\\\": \\\"e.g. £878k annually\\\",\\n    \\\"paybackPeriod\\\": \\\"e.g. 4-6 months\\\",\\n    \\\"tools\\\": [\\\"Tool 1\\\", \\\"Tool 2\\\"],\\n    \\\"publishedDate\\\": \\\"\" + new Date().toISOString().split('T')[0] + \"\\\",\\n    \\\"sourceUrl\\\": \\\"https://...\\\",\\n    \\\"content\\\": {\\n      \\\"problem\\\": \\\"Detailed problem description...\\\",\\n      \\\"solution\\\": [\\n        \\\"Step 1 - Description\\\",\\n        \\\"Step 2 - Description\\\",\\n        \\\"Step 3 - Description\\\"\\n      ],\\n      \\\"considerations\\\": [\\n        \\\"Consideration 1\\\",\\n        \\\"Consideration 2\\\"\\n      ],\\n      \\\"proof\\\": \\\"Company X achieved Y result saving Z...\\\"\\n    }\\n  }\\n]\\n\\nFind 3 real automation opportunities with proven ROI. Return ONLY valid JSON.\"}]"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Claude - Discover Ideas",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract JSON from Claude's response\nconst response = $input.item.json.content[0].text;\n\n// Try to extract JSON array\nconst jsonMatch = response.match(/\\[\\s*\\{[\\s\\S]*\\}\\s*\\]/);\n\nif (!jsonMatch) {\n  throw new Error('No JSON found in Claude response');\n}\n\nconst ideas = JSON.parse(jsonMatch[0]);\n\n// Return each idea as separate item for processing\nreturn ideas.map(idea => ({ json: idea }));"
+      },
+      "name": "Parse Claude Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Generate MDX content for automation idea\nconst idea = $input.item.json;\n\nconst mdxContent = `---\ntitle: \"${idea.title}\"\npublishedAt: \"${idea.publishedDate}\"\nsummary: \"${idea.content.problem.substring(0, 150)}...\"\nindustry: \"${idea.industry}\"\ndifficulty: \"${idea.difficulty}\"\nroiScore: ${idea.roiScore}\ntimeSaved: \"${idea.timeSaved}\"\ncostSavings: \"${idea.costSavings}\"\npaybackPeriod: \"${idea.paybackPeriod}\"\ntools: ${JSON.stringify(idea.tools)}\nsourceUrl: \"${idea.sourceUrl}\"\n---\n\n## 🎯 The Problem\n\n${idea.content.problem}\n\n## 💡 The Automation\n\nHow this automation works:\n\n${idea.content.solution.map((step, i) => {\n  const parts = step.split(' - ');\n  return `${i + 1}. **${parts[0]}** - ${parts[1] || ''}`;\n}).join('\\n')}\n\n## 🔧 Tools Required\n\n${idea.tools.map(tool => `- **${tool}**`).join('\\n')}\n\n## ⚠️ Implementation Considerations\n\n${idea.content.considerations.map(c => `- ${c}`).join('\\n')}\n\n## ✅ Proof & Signals\n\n${idea.content.proof}\n\n[View Source](${idea.sourceUrl})\n\n---\n\n*Ready to explore this for your organisation? [Get a bespoke automation report](/#contact) tailored to your business with detailed ROI projections and implementation roadmaps.*\n`;\n\nreturn {\n  json: {\n    slug: idea.slug,\n    mdxContent: mdxContent,\n    fileName: `${idea.slug}.mdx`\n  }\n};"
+      },
+      "name": "Generate MDX Content",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "owner": "MissCeptstudios",
+        "repository": "LumiGentic",
+        "filePath": "=content/automation-ideas/{{ $json.fileName }}",
+        "fileContent": "={{ $json.mdxContent }}",
+        "commitMessage": "=Add new automation idea: {{ $json.slug }}\\n\\n🤖 Auto-discovered and published by n8n + Claude",
+        "additionalParameters": {
+          "author": {
+            "name": "n8n Automation Agent",
+            "email": "automation@lumigentic.com"
+          }
+        }
+      },
+      "name": "GitHub - Commit MDX File",
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [1050, 300],
+      "credentials": {
+        "githubApi": {
+          "id": "1",
+          "name": "GitHub Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "=✅ Published new automation idea: {{ $json.slug }}\\n\\n🚀 Vercel will deploy in ~2 minutes\\n📍 https://lumigentic.com/automation-ideas/{{ $json.slug }}",
+        "options": {}
+      },
+      "name": "Slack Notification (Optional)",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.1,
+      "position": [1250, 300],
+      "credentials": {
+        "slackApi": {
+          "id": "2",
+          "name": "Slack"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Schedule Trigger - 3am Daily": {
+      "main": [
+        [
+          {
+            "node": "Claude - Discover Ideas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude - Discover Ideas": {
+      "main": [
+        [
+          {
+            "node": "Parse Claude Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Claude Response": {
+      "main": [
+        [
+          {
+            "node": "Generate MDX Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate MDX Content": {
+      "main": [
+        [
+          {
+            "node": "GitHub - Commit MDX File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub - Commit MDX File": {
+      "main": [
+        [
+          {
+            "node": "Slack Notification (Optional)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-10-24T13:00:00.000Z",
+  "versionId": "1"
+}

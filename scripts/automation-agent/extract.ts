@@ -144,7 +144,11 @@ Example:
     ],
   });
 
-  const responseText = message.content[0].text;
+  const firstContent = message.content[0];
+  if (firstContent.type !== 'text') {
+    throw new Error('Expected text content from Claude API');
+  }
+  const responseText = firstContent.text;
 
   // Extract JSON from response (handle markdown code blocks)
   const jsonMatch = responseText.match(/```json\s*([\s\S]*?)\s*```/) ||

@@ -131,7 +131,11 @@ Now output the complete MDX file following this structure exactly.`;
     ],
   });
 
-  const mdxContent = message.content[0].text;
+  const firstContent = message.content[0];
+  if (firstContent.type !== 'text') {
+    throw new Error('Expected text content from Claude API');
+  }
+  const mdxContent = firstContent.text;
 
   // Generate OG image prompt for social sharing
   const ogImagePrompt = generateOGImagePrompt(opportunity);

@@ -162,7 +162,11 @@ Respond with ONLY a decimal number between 0.0 and 1.0, nothing else.`,
     ],
   });
 
-  const response = message.content[0].text.trim();
+  const firstContent = message.content[0];
+  if (firstContent.type !== 'text') {
+    throw new Error('Expected text content from Claude API');
+  }
+  const response = firstContent.text.trim();
   const similarity = parseFloat(response);
 
   return isNaN(similarity) ? 0 : similarity;
@@ -208,7 +212,11 @@ Respond with JSON only:
     ],
   });
 
-  const responseText = message.content[0].text;
+  const firstContent = message.content[0];
+  if (firstContent.type !== 'text') {
+    throw new Error('Expected text content from Claude API');
+  }
+  const responseText = firstContent.text;
 
   try {
     // Extract JSON from response
