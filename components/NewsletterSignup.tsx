@@ -17,7 +17,7 @@ export default function NewsletterSignup() {
 
     try {
       // Insert into Supabase
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('newsletter_subscribers')
         .insert([
           {
@@ -71,7 +71,7 @@ export default function NewsletterSignup() {
         <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-lg p-4">
           <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
           <div>
-            <p className="font-semibold text-green-900">You're subscribed!</p>
+            <p className="font-semibold text-green-900">You&apos;re subscribed!</p>
             <p className="text-sm text-green-700 mt-1">{message}</p>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function NewsletterSignup() {
           </button>
 
           <p className="text-xs text-gray-500 text-center">
-            We'll send you new automation ideas weekly. Unsubscribe anytime.
+            We&apos;ll send you new automation ideas weekly. Unsubscribe anytime.
           </p>
         </form>
       )}
