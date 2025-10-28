@@ -6,6 +6,7 @@ import { Clock, DollarSign, Clipboard, Map, Shuffle, Search, Route, Rocket, BarC
 import { useState } from "react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { SparklesPreview } from "@/components/sparkles-demo";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -683,6 +684,13 @@ export default function Home() {
               &quot;We build high-impact automation that frees time, reduces costs, and unlocks growth&quot;
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10">
+        <div className="max-w-2xl mx-auto">
+          <NewsletterSignup />
         </div>
       </section>
 
