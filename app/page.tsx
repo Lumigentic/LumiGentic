@@ -146,7 +146,7 @@ export default function Home() {
                 <span className="text-gray-600">Illuminate</span>
               </h3>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-                The power to bring clarity, direction, and precision. It's the light that reveals what matters, cutting through complexity.
+                The power to bring clarity, direction, and precision. It&apos;s the light that reveals what matters, cutting through complexity.
               </p>
             </div>
 
@@ -157,7 +157,7 @@ export default function Home() {
                 <span className="text-gray-600">Agentic AI</span>
               </h3>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-                Intelligence that doesn't just analyse, but acts. It plans, decides, and executes autonomously, moving forward with intent.
+                Intelligence that doesn&apos;t just analyse, but acts. It plans, decides, and executes autonomously, moving forward with intent.
               </p>
             </div>
 

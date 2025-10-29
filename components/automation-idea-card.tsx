@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { TrendingUp, Clock, DollarSign, Wrench, Star, Zap } from 'lucide-react';
+import { TrendingUp, Clock, DollarSign, Wrench, Zap } from 'lucide-react';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 
 interface AutomationIdeaCardProps {
