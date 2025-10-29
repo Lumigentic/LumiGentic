@@ -60,18 +60,20 @@ export async function POST(request: NextRequest) {
       { success: true, message: 'Welcome email sent successfully' },
       { status: 200 }
     )
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error sending welcome email:', error)
 
     // SendGrid-specific error handling
-    if (error.response) {
-      console.error('SendGrid error response:', error.response.body)
+    if (error && typeof error === 'object' && 'response' in error) {
+      console.error('SendGrid error response:', (error as { response: { body: unknown } }).response.body)
     }
+
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred'
 
     return NextResponse.json(
       {
         error: 'Failed to send welcome email',
-        details: error.message
+        details: errorMessage
       },
       { status: 500 }
     )
