@@ -5,10 +5,10 @@ import { SparklesCore } from "@/components/ui/sparkles"
 export function SparklesPreview() {
   return (
     <div className="h-[500px] sm:h-[600px] md:h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md px-4">
-      <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold text-center text-white relative z-20 mb-4 sm:mb-6">
+      <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold text-center text-white relative z-20 mb-6 sm:mb-8 md:mb-12">
         LumiGentic
       </h1>
-      <div className="w-full max-w-[90vw] sm:max-w-[40rem] h-32 sm:h-40 relative">
+      <div className="w-full max-w-[90vw] sm:max-w-[40rem] h-40 sm:h-48 md:h-56 relative">
         {/* Gradients */}
         <div className="absolute inset-x-4 sm:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
         <div className="absolute inset-x-4 sm:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />

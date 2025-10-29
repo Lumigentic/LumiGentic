@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
-import { ArrowLeft, Clock, DollarSign, TrendingUp, ExternalLink, Calendar } from 'lucide-react';
+import { ArrowLeft, Clock, DollarSign, TrendingUp, ExternalLink, Calendar, Zap } from 'lucide-react';
 import { AutomationIdeaNav } from './AutomationIdeaNav';
 import { getAllAutomationIdeaSlugs, getAutomationIdeaBySlug } from '@/lib/supabase';
 
@@ -38,12 +38,6 @@ export default async function AutomationIdeaPage({ params }: { params: Promise<{
     notFound();
   }
 
-  const difficultyColor = {
-    Easy: 'text-green-600 bg-green-50',
-    Medium: 'text-yellow-600 bg-yellow-50',
-    Hard: 'text-red-600 bg-red-50',
-  }[idea.difficulty] || 'text-gray-600 bg-gray-50';
-
   return (
     <div className="bg-white text-black min-h-screen">
       {/* Navigation */}
@@ -66,18 +60,15 @@ export default async function AutomationIdeaPage({ params }: { params: Promise<{
       <header className="pb-12 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 flex-wrap mb-6">
-            <span className="px-4 py-2 text-sm font-medium bg-black text-white rounded">
+            <span className="px-4 py-2 text-sm font-semibold bg-black text-white rounded-sm">
               {idea.industry}
             </span>
-            <span className={`px-4 py-2 text-sm font-medium rounded ${difficultyColor}`}>
+            <span className="px-4 py-2 text-sm font-medium border border-black/20 rounded-sm">
               {idea.difficulty}
             </span>
-            <div className="flex items-center gap-1 text-amber-600">
-              <span className="text-sm font-medium mr-1">ROI Score:</span>
-              {Array.from({ length: Math.min(5, Math.ceil(idea.roiScore / 2)) }).map((_, i) => (
-                <TrendingUp key={i} className="w-4 h-4" />
-              ))}
-              <span className="text-sm font-medium ml-1">{idea.roiScore}/10</span>
+            <div className="flex items-center gap-1.5 bg-black/5 px-3 py-2 rounded-sm">
+              <Zap className="w-4 h-4 text-black" strokeWidth={2} />
+              <span className="text-sm font-bold text-black">{idea.roiScore}/10</span>
             </div>
           </div>
 
@@ -86,35 +77,35 @@ export default async function AutomationIdeaPage({ params }: { params: Promise<{
           </h1>
 
           {/* Metrics Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-gray-50 rounded-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-black/5 rounded-sm border border-black/10">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <Clock className="w-5 h-5 text-gray-600" />
-                <span className="text-sm font-medium text-gray-600">Time Saved</span>
+                <Clock className="w-5 h-5 text-black" strokeWidth={1.5} />
+                <span className="text-sm font-semibold text-gray-600">Time Saved</span>
               </div>
-              <p className="font-semibold text-sm">{idea.timeSaved}</p>
+              <p className="font-bold text-base">{idea.timeSaved}</p>
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <DollarSign className="w-5 h-5 text-gray-600" />
-                <span className="text-sm font-medium text-gray-600">Annual Impact</span>
+                <DollarSign className="w-5 h-5 text-black" strokeWidth={1.5} />
+                <span className="text-sm font-semibold text-gray-600">Annual Impact</span>
               </div>
-              <p className="font-semibold text-sm">{idea.costSavings}</p>
+              <p className="font-bold text-base">{idea.costSavings}</p>
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <TrendingUp className="w-5 h-5 text-gray-600" />
-                <span className="text-sm font-medium text-gray-600">Payback Period</span>
+                <TrendingUp className="w-5 h-5 text-black" strokeWidth={1.5} />
+                <span className="text-sm font-semibold text-gray-600">Payback Period</span>
               </div>
-              <p className="font-semibold text-sm">{idea.paybackPeriod}</p>
+              <p className="font-bold text-base">{idea.paybackPeriod}</p>
             </div>
             {idea.productivityGain && (
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <TrendingUp className="w-5 h-5 text-gray-600" />
-                  <span className="text-sm font-medium text-gray-600">Productivity Gain</span>
+                  <Zap className="w-5 h-5 text-black" strokeWidth={1.5} />
+                  <span className="text-sm font-semibold text-gray-600">Productivity Gain</span>
                 </div>
-                <p className="font-semibold text-sm">{idea.productivityGain}</p>
+                <p className="font-bold text-base">{idea.productivityGain}</p>
               </div>
             )}
           </div>
@@ -159,6 +150,32 @@ export default async function AutomationIdeaPage({ params }: { params: Promise<{
           )}
         </div>
       </article>
+
+      {/* CTA Section */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-black text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+            Want to implement this automation?
+          </h2>
+          <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8">
+            Get a bespoke automation report tailored to your business with ROI projections and implementation roadmaps.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:info@lumigentic.com?subject=Discovery Call Request&body=I'm interested in discussing automation opportunities for my organisation."
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-sm hover:bg-gray-100 transition-colors text-center"
+            >
+              Book a Discovery Call
+            </a>
+            <a
+              href="mailto:info@lumigentic.com?subject=Bespoke Automation Report Request&body=I would like to receive a bespoke automation report for my organisation."
+              className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-sm hover:bg-white/10 transition-colors text-center"
+            >
+              Get a Bespoke Report
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="py-8 px-4 sm:px-6 border-t border-black/10">

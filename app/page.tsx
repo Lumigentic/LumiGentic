@@ -131,6 +131,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Brand Story */}
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg text-center text-gray-700 mb-8 sm:mb-12 leading-relaxed">
+            Lumigentic is born from two forces that define our philosophy and our technology.
+          </p>
+
+          <div className="space-y-8 sm:space-y-10">
+            <div className="text-center">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+                <span className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">Lumi</span>
+                <span className="text-gray-400 mx-2">→</span>
+                <span className="text-gray-600">Illuminate</span>
+              </h3>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                The power to bring clarity, direction, and precision. It's the light that reveals what matters, cutting through complexity.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+                <span className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">Gentic</span>
+                <span className="text-gray-400 mx-2">→</span>
+                <span className="text-gray-600">Agentic AI</span>
+              </h3>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                Intelligence that doesn't just analyse, but acts. It plans, decides, and executes autonomously, moving forward with intent.
+              </p>
+            </div>
+
+            <div className="text-center pt-6 sm:pt-8 border-t border-black/10">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6 max-w-3xl mx-auto">
+                Together, they form a system as fast and direct as a beam of light - built on processes that move straight to the outcome, as linear and efficient as light itself, with no unnecessary routes, no friction, and no noise.
+              </p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-black">
+                Lumigentic means <span className="italic">clarity that acts</span> - light with purpose.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* The Problem */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-t border-black/10">
         <div className="max-w-7xl mx-auto">
@@ -142,7 +184,7 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
-            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+            <div className="relative bg-white p-4 sm:p-6 rounded-sm border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -151,14 +193,14 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <Clock className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2 relative z-10">Manual Admin Barrier</h3>
+              <Clock className="w-8 h-8 sm:w-10 sm:h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-base sm:text-lg font-bold mb-2 relative z-10">Manual Admin Barrier</h3>
               <p className="text-gray-600 text-sm relative z-10">
                 40% of UK SMEs cite manual admin as their #1 barrier to growth
               </p>
             </div>
 
-            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+            <div className="relative bg-white p-4 sm:p-6 rounded-sm border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -167,14 +209,14 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <DollarSign className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2 relative z-10">Hidden Costs</h3>
+              <DollarSign className="w-8 h-8 sm:w-10 sm:h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-base sm:text-lg font-bold mb-2 relative z-10">Hidden Costs</h3>
               <p className="text-gray-600 text-sm relative z-10">
                 Storage, errors, delays, and lost revenue pile up
               </p>
             </div>
 
-            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+            <div className="relative bg-white p-4 sm:p-6 rounded-sm border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -183,14 +225,14 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <Clipboard className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2 relative z-10">Wasted Time</h3>
+              <Clipboard className="w-8 h-8 sm:w-10 sm:h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-base sm:text-lg font-bold mb-2 relative z-10">Wasted Time</h3>
               <p className="text-gray-600 text-sm relative z-10">
                 The average SME employee wastes 6+ hours/week on avoidable tasks
               </p>
             </div>
 
-            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+            <div className="relative bg-white p-4 sm:p-6 rounded-sm border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -199,14 +241,14 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <Map className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2 relative z-10">Inefficient Journeys</h3>
+              <Map className="w-8 h-8 sm:w-10 sm:h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-base sm:text-lg font-bold mb-2 relative z-10">Inefficient Journeys</h3>
               <p className="text-gray-600 text-sm relative z-10">
                 Bookings, enquiries, or sales processes are inefficient
               </p>
             </div>
 
-            <div className="relative bg-white p-6 rounded-sm border border-black/10">
+            <div className="relative bg-white p-4 sm:p-6 rounded-sm border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -215,8 +257,8 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <Shuffle className="w-10 h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
-              <h3 className="text-lg font-bold mb-2 relative z-10">Siloed Systems</h3>
+              <Shuffle className="w-8 h-8 sm:w-10 sm:h-10 mb-3 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-base sm:text-lg font-bold mb-2 relative z-10">Siloed Systems</h3>
               <p className="text-gray-600 text-sm relative z-10">
                 Tools don&apos;t talk to each other, causing duplication and errors
               </p>
@@ -224,10 +266,10 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <p className="text-2xl font-bold text-black">
+            <p className="text-xl sm:text-2xl font-bold text-black">
               80% of automation ROI is realised in &lt;12 months
             </p>
-            <p className="text-lg text-gray-700 mt-4">
+            <p className="text-base sm:text-lg text-gray-700 mt-4">
               LumiGentic cuts the waste and turns inefficiencies into productivity gains
             </p>
           </div>
@@ -279,7 +321,7 @@ export default function Home() {
             ].map((step, idx) => {
               const IconComponent = step.icon;
               return (
-                <div key={idx} className="relative bg-black/5 p-6 rounded-lg border border-black/10 hover:bg-black/10 transition-colors">
+                <div key={idx} className="relative bg-black/5 p-4 sm:p-6 rounded-lg border border-black/10 hover:bg-black/10 transition-colors">
                   <GlowingEffect
                     spread={40}
                     glow={true}
@@ -288,8 +330,8 @@ export default function Home() {
                     inactiveZone={0.3}
                     borderWidth={2}
                   />
-                  <IconComponent className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
-                  <h3 className="text-xl font-bold mb-2 relative z-10">{step.title}</h3>
+                  <IconComponent className="w-10 h-10 sm:w-12 sm:h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 relative z-10">{step.title}</h3>
                   <p className="text-sm text-gray-600 mb-4 relative z-10">{step.subtitle}</p>
                   <div className="pt-4 border-t border-black/10 relative z-10">
                     <p className="text-xs text-gray-500 font-semibold">DELIVERABLE</p>
@@ -323,9 +365,9 @@ export default function Home() {
             <div className="bg-white rounded-sm border border-black/10 overflow-hidden">
               <div className="p-4 sm:p-6 md:p-8">
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  <Hospital className="w-12 h-12 sm:w-14 sm:h-14 text-black flex-shrink-0" strokeWidth={1.5} />
+                  <Hospital className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-black flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold mb-2">NHS Autism Diagnostic Pathway</h3>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">NHS Autism Diagnostic Pathway</h3>
                     <p className="text-sm sm:text-base text-gray-600">Transforming diagnostic efficiency with AI automation</p>
                   </div>
                 </div>
@@ -380,24 +422,24 @@ export default function Home() {
                   <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-black">Impact</h4>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                     <div className="text-center">
-                      <Clock className="w-10 h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-black">~60%</p>
-                      <p className="text-sm text-gray-600">Time reduction per assessment (5.8h → ~2.25h)</p>
+                      <Clock className="w-8 h-8 sm:w-10 sm:h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
+                      <p className="text-xl sm:text-2xl font-bold text-black">~60%</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Time reduction per assessment (5.8h → ~2.25h)</p>
                     </div>
                     <div className="text-center">
-                      <TrendingUp className="w-10 h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-black">~2.5×</p>
-                      <p className="text-sm text-gray-600">Throughput increase with existing workforce</p>
+                      <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
+                      <p className="text-xl sm:text-2xl font-bold text-black">~2.5×</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Throughput increase with existing workforce</p>
                     </div>
                     <div className="text-center">
-                      <Target className="w-10 h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-black">Hub Model</p>
-                      <p className="text-sm text-gray-600">Foundation for Neurodiversity Hub (ASD/ADHD)</p>
+                      <Target className="w-8 h-8 sm:w-10 sm:h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
+                      <p className="text-xl sm:text-2xl font-bold text-black">Hub Model</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Foundation for Neurodiversity Hub (ASD/ADHD)</p>
                     </div>
                     <div className="text-center">
-                      <DollarSign className="w-10 h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-black">£1.5m</p>
-                      <p className="text-sm text-gray-600">Net annual contribution (scalable to £4.5m)</p>
+                      <DollarSign className="w-8 h-8 sm:w-10 sm:h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
+                      <p className="text-xl sm:text-2xl font-bold text-black">£1.5m</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Net annual contribution (scalable to £4.5m)</p>
                     </div>
                   </div>
                 </div>
@@ -408,9 +450,9 @@ export default function Home() {
             <div className="bg-white rounded-sm border border-black/10 overflow-hidden">
               <div className="p-4 sm:p-6 md:p-8">
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  <Wrench className="w-12 h-12 sm:w-14 sm:h-14 text-black flex-shrink-0" strokeWidth={1.5} />
+                  <Wrench className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-black flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold mb-2">Auto Garage - Smart Booking System</h3>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">Auto Garage - Smart Booking System</h3>
                     <p className="text-sm sm:text-base text-gray-600">Unlocking capacity through intelligent scheduling</p>
                   </div>
                 </div>
@@ -457,24 +499,24 @@ export default function Home() {
                   <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-black">Impact</h4>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                     <div className="text-center">
-                      <TrendingUp className="w-10 h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-black">40%</p>
-                      <p className="text-sm text-gray-600">Efficiency increase in service throughput</p>
+                      <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
+                      <p className="text-xl sm:text-2xl font-bold text-black">40%</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Efficiency increase in service throughput</p>
                     </div>
                     <div className="text-center">
-                      <Car className="w-10 h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-black">Reduced</p>
-                      <p className="text-sm text-gray-600">Car storage costs and improved site safety</p>
+                      <Car className="w-8 h-8 sm:w-10 sm:h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
+                      <p className="text-xl sm:text-2xl font-bold text-black">Reduced</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Car storage costs and improved site safety</p>
                     </div>
                     <div className="text-center">
-                      <Calendar className="w-10 h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-black">Better</p>
-                      <p className="text-sm text-gray-600">Customer experience with predictable turnaround</p>
+                      <Calendar className="w-8 h-8 sm:w-10 sm:h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
+                      <p className="text-xl sm:text-2xl font-bold text-black">Better</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Customer experience with predictable turnaround</p>
                     </div>
                     <div className="text-center">
-                      <Coins className="w-10 h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
-                      <p className="text-2xl font-bold text-black">Smoother</p>
-                      <p className="text-sm text-gray-600">Cash flow and reduced admin load</p>
+                      <Coins className="w-8 h-8 sm:w-10 sm:h-10 mb-2 text-black mx-auto" strokeWidth={1.5} />
+                      <p className="text-xl sm:text-2xl font-bold text-black">Smoother</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Cash flow and reduced admin load</p>
                     </div>
                   </div>
                 </div>
@@ -493,7 +535,7 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+            <div className="relative bg-black/5 p-4 sm:p-6 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -502,11 +544,11 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <h3 className="text-xl font-bold mb-3 relative z-10">Process Redesign & Mapping</h3>
-              <p className="text-gray-600 relative z-10">Uncover inefficiencies and restructure workflows</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 relative z-10">Process Redesign & Mapping</h3>
+              <p className="text-sm sm:text-base text-gray-600 relative z-10">Uncover inefficiencies and restructure workflows</p>
             </div>
 
-            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+            <div className="relative bg-black/5 p-4 sm:p-6 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -515,11 +557,11 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <h3 className="text-xl font-bold mb-3 relative z-10">Automation Strategy</h3>
-              <p className="text-gray-600 relative z-10">Define the ROI and prioritise the quick wins</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 relative z-10">Automation Strategy</h3>
+              <p className="text-sm sm:text-base text-gray-600 relative z-10">Define the ROI and prioritise the quick wins</p>
             </div>
 
-            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+            <div className="relative bg-black/5 p-4 sm:p-6 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -528,11 +570,11 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <h3 className="text-xl font-bold mb-3 relative z-10">AI Integration</h3>
-              <p className="text-gray-600 relative z-10">Apply speech-to-text, auto-scoring, and generative AI to real processes</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 relative z-10">AI Integration</h3>
+              <p className="text-sm sm:text-base text-gray-600 relative z-10">Apply speech-to-text, auto-scoring, and generative AI to real processes</p>
             </div>
 
-            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+            <div className="relative bg-black/5 p-4 sm:p-6 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -541,11 +583,11 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <h3 className="text-xl font-bold mb-3 relative z-10">Bespoke Automation Builds</h3>
-              <p className="text-gray-600 relative z-10">Booking, invoicing, reporting, scheduling systems</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 relative z-10">Bespoke Automation Builds</h3>
+              <p className="text-sm sm:text-base text-gray-600 relative z-10">Booking, invoicing, reporting, scheduling systems</p>
             </div>
 
-            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+            <div className="relative bg-black/5 p-4 sm:p-6 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -554,11 +596,11 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <h3 className="text-xl font-bold mb-3 relative z-10">Custom Dashboards & Analytics</h3>
-              <p className="text-gray-600 relative z-10">Real-time performance visibility</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 relative z-10">Custom Dashboards & Analytics</h3>
+              <p className="text-sm sm:text-base text-gray-600 relative z-10">Real-time performance visibility</p>
             </div>
 
-            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+            <div className="relative bg-black/5 p-4 sm:p-6 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -567,11 +609,11 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <h3 className="text-xl font-bold mb-3 relative z-10">AI Copilots & Agents</h3>
-              <p className="text-gray-600 relative z-10">Handling repetitive tasks and decisions</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 relative z-10">AI Copilots & Agents</h3>
+              <p className="text-sm sm:text-base text-gray-600 relative z-10">Handling repetitive tasks and decisions</p>
             </div>
 
-            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+            <div className="relative bg-black/5 p-4 sm:p-6 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -580,11 +622,11 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <h3 className="text-xl font-bold mb-3 relative z-10">Workflow Integrations</h3>
-              <p className="text-gray-600 relative z-10">Connecting tools like Airtable, Power Automate, Python builds</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 relative z-10">Workflow Integrations</h3>
+              <p className="text-sm sm:text-base text-gray-600 relative z-10">Connecting tools like Airtable, Power Automate, Python builds</p>
             </div>
 
-            <div className="relative bg-black/5 p-6 rounded-lg border border-black/10">
+            <div className="relative bg-black/5 p-4 sm:p-6 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -593,8 +635,8 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <h3 className="text-xl font-bold mb-3 relative z-10">Training & Capability Uplift</h3>
-              <p className="text-gray-600 relative z-10">So clients aren&apos;t dependent on consultants</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 relative z-10">Training & Capability Uplift</h3>
+              <p className="text-sm sm:text-base text-gray-600 relative z-10">So clients aren&apos;t dependent on consultants</p>
             </div>
           </div>
         </div>
@@ -614,7 +656,7 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
-            <div className="relative bg-white p-6 sm:p-8 rounded-lg border border-black/10">
+            <div className="relative bg-white p-5 sm:p-6 md:p-8 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -623,14 +665,14 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <Target className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
-              <h3 className="text-2xl font-bold mb-3 relative z-10">Proven Track Record</h3>
-              <p className="text-gray-700 relative z-10">
+              <Target className="w-10 h-10 sm:w-12 sm:h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 relative z-10">Proven Track Record</h3>
+              <p className="text-sm sm:text-base text-gray-700 relative z-10">
                 15+ years delivering large-scale transformation and complex AI automation in the public and private sector
               </p>
             </div>
 
-            <div className="relative bg-white p-8 rounded-lg border border-black/10">
+            <div className="relative bg-white p-5 sm:p-6 md:p-8 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -639,14 +681,14 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <DollarSign className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
-              <h3 className="text-2xl font-bold mb-3 relative z-10">Real Results</h3>
-              <p className="text-gray-700 relative z-10">
+              <DollarSign className="w-10 h-10 sm:w-12 sm:h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 relative z-10">Real Results</h3>
+              <p className="text-sm sm:text-base text-gray-700 relative z-10">
                 £3m+ savings delivered, supply chains built, digital solutions implemented
               </p>
             </div>
 
-            <div className="relative bg-white p-8 rounded-lg border border-black/10">
+            <div className="relative bg-white p-5 sm:p-6 md:p-8 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -655,14 +697,14 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <Zap className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
-              <h3 className="text-2xl font-bold mb-3 relative z-10">Boutique Scale</h3>
-              <p className="text-gray-700 relative z-10">
+              <Zap className="w-10 h-10 sm:w-12 sm:h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 relative z-10">Boutique Scale</h3>
+              <p className="text-sm sm:text-base text-gray-700 relative z-10">
                 Hands-on expertise and rapid delivery - no corporate bureaucracy, just results
               </p>
             </div>
 
-            <div className="relative bg-white p-8 rounded-lg border border-black/10">
+            <div className="relative bg-white p-5 sm:p-6 md:p-8 rounded-lg border border-black/10">
               <GlowingEffect
                 spread={40}
                 glow={true}
@@ -671,9 +713,9 @@ export default function Home() {
                 inactiveZone={0.3}
                 borderWidth={2}
               />
-              <Globe className="w-12 h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
-              <h3 className="text-2xl font-bold mb-3 relative z-10">Scalable Network</h3>
-              <p className="text-gray-700 relative z-10">
+              <Globe className="w-10 h-10 sm:w-12 sm:h-12 mb-4 text-black relative z-10" strokeWidth={1.5} />
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 relative z-10">Scalable Network</h3>
+              <p className="text-sm sm:text-base text-gray-700 relative z-10">
                 Network of developers and automation specialists ready to scale with client needs
               </p>
             </div>
