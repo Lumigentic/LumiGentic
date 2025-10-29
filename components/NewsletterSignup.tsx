@@ -40,15 +40,21 @@ export default function NewsletterSignup() {
       } else {
         setStatus('success')
         setMessage('Successfully subscribed! Check your email for confirmation.')
+
+        // Send welcome email
+        try {
+          await fetch('/api/send-welcome-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, name })
+          })
+        } catch (emailError) {
+          console.error('Failed to send welcome email:', emailError)
+          // Don't show error to user - subscription still succeeded
+        }
+
         setEmail('')
         setName('')
-
-        // Optional: Trigger welcome email via Edge Function
-        // await fetch('/api/send-welcome-email', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify({ email, name })
-        // })
       }
     } catch (err) {
       console.error('Newsletter signup error:', err)
