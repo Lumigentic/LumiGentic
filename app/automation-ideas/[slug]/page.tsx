@@ -3,11 +3,11 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
 import { ArrowLeft, Clock, DollarSign, TrendingUp, ExternalLink, Calendar } from 'lucide-react';
 import { AutomationIdeaNav } from './AutomationIdeaNav';
-import { getAllIdeaSlugs, getSerializedIdea } from '@/lib/mdx';
+import { getAllAutomationIdeaSlugs, getAutomationIdeaBySlug } from '@/lib/supabase';
 
 // Generate static params for all automation ideas
 export async function generateStaticParams() {
-  const slugs = getAllIdeaSlugs();
+  const slugs = await getAllAutomationIdeaSlugs();
   return slugs.map((slug) => ({
     slug,
   }));
@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 // Generate metadata for SEO
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const idea = await getSerializedIdea(slug);
+  const idea = await getAutomationIdeaBySlug(slug);
 
   if (!idea) {
     return {
@@ -25,26 +25,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${idea.frontmatter.title} | LumiGentic`,
-    description: idea.frontmatter.timeSaved + ' - ' + idea.frontmatter.costSavings,
+    title: `${idea.title} | LumiGentic`,
+    description: idea.timeSaved + ' - ' + idea.costSavings,
   };
 }
 
 export default async function AutomationIdeaPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const idea = await getSerializedIdea(slug);
+  const idea = await getAutomationIdeaBySlug(slug);
 
   if (!idea) {
     notFound();
   }
 
-  const { frontmatter, mdxSource } = idea;
-
   const difficultyColor = {
     Easy: 'text-green-600 bg-green-50',
     Medium: 'text-yellow-600 bg-yellow-50',
     Hard: 'text-red-600 bg-red-50',
-  }[frontmatter.difficulty] || 'text-gray-600 bg-gray-50';
+  }[idea.difficulty] || 'text-gray-600 bg-gray-50';
 
   return (
     <div className="bg-white text-black min-h-screen">
@@ -69,22 +67,22 @@ export default async function AutomationIdeaPage({ params }: { params: Promise<{
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 flex-wrap mb-6">
             <span className="px-4 py-2 text-sm font-medium bg-black text-white rounded">
-              {frontmatter.industry}
+              {idea.industry}
             </span>
             <span className={`px-4 py-2 text-sm font-medium rounded ${difficultyColor}`}>
-              {frontmatter.difficulty}
+              {idea.difficulty}
             </span>
             <div className="flex items-center gap-1 text-amber-600">
               <span className="text-sm font-medium mr-1">ROI Score:</span>
-              {Array.from({ length: Math.min(5, Math.ceil(frontmatter.roiScore / 2)) }).map((_, i) => (
+              {Array.from({ length: Math.min(5, Math.ceil(idea.roiScore / 2)) }).map((_, i) => (
                 <TrendingUp key={i} className="w-4 h-4" />
               ))}
-              <span className="text-sm font-medium ml-1">{frontmatter.roiScore}/10</span>
+              <span className="text-sm font-medium ml-1">{idea.roiScore}/10</span>
             </div>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">
-            {frontmatter.title}
+            {idea.title}
           </h1>
 
           {/* Metrics Grid */}
@@ -94,29 +92,29 @@ export default async function AutomationIdeaPage({ params }: { params: Promise<{
                 <Clock className="w-5 h-5 text-gray-600" />
                 <span className="text-sm font-medium text-gray-600">Time Saved</span>
               </div>
-              <p className="font-semibold text-sm">{frontmatter.timeSaved}</p>
+              <p className="font-semibold text-sm">{idea.timeSaved}</p>
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <DollarSign className="w-5 h-5 text-gray-600" />
                 <span className="text-sm font-medium text-gray-600">Annual Impact</span>
               </div>
-              <p className="font-semibold text-sm">{frontmatter.costSavings}</p>
+              <p className="font-semibold text-sm">{idea.costSavings}</p>
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <TrendingUp className="w-5 h-5 text-gray-600" />
                 <span className="text-sm font-medium text-gray-600">Payback Period</span>
               </div>
-              <p className="font-semibold text-sm">{frontmatter.paybackPeriod}</p>
+              <p className="font-semibold text-sm">{idea.paybackPeriod}</p>
             </div>
-            {frontmatter.productivityGain && (
+            {idea.productivityGain && (
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <TrendingUp className="w-5 h-5 text-gray-600" />
                   <span className="text-sm font-medium text-gray-600">Productivity Gain</span>
                 </div>
-                <p className="font-semibold text-sm">{frontmatter.productivityGain}</p>
+                <p className="font-semibold text-sm">{idea.productivityGain}</p>
               </div>
             )}
           </div>
@@ -126,7 +124,7 @@ export default async function AutomationIdeaPage({ params }: { params: Promise<{
       {/* MDX Content */}
       <article className="pb-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-black prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline">
-          <MDXRemote source={mdxSource} />
+          <MDXRemote source={idea.content} />
         </div>
 
         {/* Metadata Footer */}
@@ -134,7 +132,7 @@ export default async function AutomationIdeaPage({ params }: { params: Promise<{
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4" />
             <span>
-              Published {new Date(frontmatter.publishedDate).toLocaleDateString('en-GB', {
+              Published {new Date(idea.publishedDate).toLocaleDateString('en-GB', {
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric',
@@ -145,11 +143,11 @@ export default async function AutomationIdeaPage({ params }: { params: Promise<{
           <Link href="/automation-ideas" className="hover:text-black transition-colors">
             Part of the LumiGentic Automation Idea Browser
           </Link>
-          {frontmatter.sourceUrl && (
+          {idea.sourceUrl && (
             <>
               <span className="hidden sm:inline">•</span>
               <a
-                href={frontmatter.sourceUrl}
+                href={idea.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 hover:text-black transition-colors"

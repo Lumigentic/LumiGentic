@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "discover-ideas": "tsx scripts/automation-agent/index.ts",
-    "discover-with-claude": "tsx scripts/discover-with-claude.ts"
+    "discover-with-claude": "tsx scripts/discover-with-claude.ts",
+    "migrate-to-supabase": "tsx scripts/migrate-mdx-to-supabase.ts"
   },
   "dependencies": {
     "@splinetool/react-spline": "^4.1.0",
@@ -18,6 +19,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
     "framer-motion": "^12.23.24",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.544.0",
