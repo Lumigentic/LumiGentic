@@ -64,10 +64,10 @@ export function AutomationIdeasClient({ ideas }: Props) {
             <Image
               src="/lumigentic-logo.svg"
               alt="LumiGentic"
-              width={280}
-              height={64}
+              width={320}
+              height={80}
               priority
-              className="w-[200px] h-auto sm:w-[280px]"
+              className="w-[220px] h-auto sm:w-[320px]"
             />
           </Link>
           <div className="hidden md:flex gap-8 text-base font-medium">
@@ -140,7 +140,7 @@ export function AutomationIdeasClient({ ideas }: Props) {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white">
+      <section className="pt-24 pb-12 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             Automation Idea Browser

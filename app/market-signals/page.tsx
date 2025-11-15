@@ -15,10 +15,10 @@ export default function MarketSignals() {
             <Image
               src="/lumigentic-logo.svg"
               alt="LumiGentic"
-              width={280}
-              height={64}
+              width={320}
+              height={80}
               priority
-              className="w-[200px] h-auto sm:w-[280px]"
+              className="w-[220px] h-auto sm:w-[320px]"
             />
           </Link>
         </div>
